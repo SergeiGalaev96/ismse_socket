@@ -1,0 +1,62 @@
+{
+  "formName": "AdultsIPRSearchForm",
+  "docDefId": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+  "medicalCardDocDefId": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+  "personDocDefId": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+  "label": "Поиск ИПР детский",
+  "sections": [
+    {
+      "type": "Section",
+      "label": "Даты освидетельствования",
+      "name": "ExamDates",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "ExamStartDate",
+          "label": "Дата начала экспертизы",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "ExamFinishDate",
+          "label": "Дата окончания экспертизы",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресc",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

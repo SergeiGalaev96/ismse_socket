@@ -1,0 +1,1618 @@
+{
+  "Administrator": [
+    {
+      "name": "CISSA",
+      "label": "МСЭК",
+      "state": true,
+      "level2": [
+        {
+          "commandType": "launchProcess",
+          "processKey": "process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae",
+          "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+          "name": "createAdultsRegForm",
+          "label": "Поиск",
+          "parentLabel": "Поиск/Рег-я"
+        },
+        {
+          "name": "adultsMedakt",
+          "label": "Мед. акт взрослый",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_322b2aa8-a0bf-4b58-9eed-eb962dd9dba2",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_865b2ea8-a9bf-7b58-9eed-eb524dd9dba9",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_258b2ea8-b9bv-9e58-6eed-ub520dd9dba3",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f72b6fb6-6ad1-42b4-9288-aa61b775991b",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f0999b4d-684f-4bff-bd85-31ca3b4b4336",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState2",
+              "label": "Истекшие по сроку инв.",
+              "parentLabel": "Истекшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6fed8290-f7e2-4a8c-9a19-5bd9191011dc",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_96349d16-005a-47d9-9052-f1d0052da490",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState4",
+              "label": "Перешедшие на воз-ю пенсию",
+              "parentLabel": "На воз-й пенсии(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_365b8ea4-b5bv-1e58-7eew-ut520gf9dba5",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_121b2ea8-t3bw-2b46-9ppp-ol524ra9dba5",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "searchAdultsMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_e0bf08ea-cf82-402b-96fd-40d85ffdbccb",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "exportAdultsMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_c8efe1da-271b-4e91-a161-cb9fbd9a584d",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Вз)"
+            }
+          ]
+        },
+        {
+          "name": "childMedakt",
+          "label": "Мед. акт детский",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_654b7er9-a0bf-6b58-3eed-sd369jj9dba1",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_357b7ea8-a9bf-7b58-9gaw-er964dd9mnb9",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_203b2yt8-b7kv-1e45-6rrt-ub403kj9dla0",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_d126f203-fac5-4f3b-a29c-b583babe0578",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_a71df8dc-fd84-46d0-a4f3-9496526234e6",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_3e8fcaff-07bc-408d-a232-1c46120fd0ae",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState2",
+              "label": "Истекшийе по сроку инв.",
+              "parentLabel": "Истекшийе по сроку инв.(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_db5ef530-d364-4103-8bca-b19ee67f17fc",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_987bfe07-fffb-4e1f-9edd-731f53be09b1",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showChildToAdultsMedakt",
+              "label": "Достигшие 18 лет",
+              "parentLabel": "Достигшие 18"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_234b8or4-b9fd-1e58-7gaq-ut863gf9yre1",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showChildIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_655b9ll8-t3bw-4u49-9uio-ol524yn9lda3",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "searchChildMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6745c29e-e7a6-4cf8-b7c0-0c5ef9db1eec",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "exportChildMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Дт)"
+            }  
+            
+          ]
+        },
+        {
+          "name": "complaintsAppeals",
+          "label": "Жалобы/Аппеляции",
+          "state": false,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_998t8aa1-a0bf-4b58-9lsa-eb633dd9uwmn",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Создать жалобу",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_112t2qq6-a7bf-4b36-9lsa-eb617lk9lkas",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Поиск жалоб",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_862t9qw1-a0qf-4b58-4lsa-eb633dd9ksat",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Создать аппеляцию",
+              "parentLabel": "Аппеляции"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_637t5yt9-a7bf-4b36-9qo-eb637lk9iqpf",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Поиск аппеляций",
+              "parentLabel": "Аппеляции"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commandType": "launchProcess",
+      "processKey": "process_696b2oi8-t2ew-2b34-9gfq-ol367ra8ajn5",
+      "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+      "name": "transferAdultsMedakt",
+      "label": "Перевод мед. актов",
+      "parentLabel": "Перевод"
+    },
+    {
+      "commandType": "launchProcess",
+      "processKey": "process_391q9dm8-a0vv-4b34-9ksq-eb369dd9iawl",
+      "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+      "name": "Users",
+      "label": "Пользователи",
+      "parentLabel": "Пользователи"
+    },
+    {
+      "commandType": "launchProcess",
+      "processKey": "process_09b028c9-131e-43af-96e9-3ec2df36a7c2",
+      "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+      "name": "Monitoring",
+      "label": "Мониторинг",
+      "parentLabel": "Мониторинг"
+    },
+    {
+      "commandType": "clearEnumData",
+      "processKey": "none",
+      "name": "ClearEnumData",
+      "label": "Сброс списков",
+      "parentLabel": "Сброс"
+    },
+    {
+      "commandType": "redeploy",
+      "processKey": "none",
+      "name": "Redeploy",
+      "label": "Redeploy",
+      "parentLabel": "Сброс процессов"
+    }
+  ],
+  "Doctor": [
+    {
+      "name": "CISSA",
+      "label": "МСЭК",
+      "state": true,
+      "level2": [
+        {
+          "commandType": "launchProcess",
+          "processKey": "process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae",
+          "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+          "name": "createAdultsRegForm",
+          "label": "Поиск",
+          "parentLabel": "Поиск/Рег-я"
+        },
+        {
+          "name": "adultsMedakt",
+          "label": "Мед. акт взрослый",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_322b2aa8-a0bf-4b58-9eed-eb962dd9dba2",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_865b2ea8-a9bf-7b58-9eed-eb524dd9dba9",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_258b2ea8-b9bv-9e58-6eed-ub520dd9dba3",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f72b6fb6-6ad1-42b4-9288-aa61b775991b",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f0999b4d-684f-4bff-bd85-31ca3b4b4336",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState2",
+              "label": "Истекшие по сроку инв.",
+              "parentLabel": "Истекшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6fed8290-f7e2-4a8c-9a19-5bd9191011dc",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_96349d16-005a-47d9-9052-f1d0052da490",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState4",
+              "label": "Перешедшие на воз-ю пенсию",
+              "parentLabel": "На воз-й пенсии(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_365b8ea4-b5bv-1e58-7eew-ut520gf9dba5",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_121b2ea8-t3bw-2b46-9ppp-ol524ra9dba5",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "searchAdultsMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_e0bf08ea-cf82-402b-96fd-40d85ffdbccb",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "exportAdultsMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_c8efe1da-271b-4e91-a161-cb9fbd9a584d",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Вз)"
+            }
+          ]
+        },
+        {
+          "name": "childMedakt",
+          "label": "Мед. акт детский",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_654b7er9-a0bf-6b58-3eed-sd369jj9dba1",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_357b7ea8-a9bf-7b58-9gaw-er964dd9mnb9",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_203b2yt8-b7kv-1e45-6rrt-ub403kj9dla0",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_d126f203-fac5-4f3b-a29c-b583babe0578",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_a71df8dc-fd84-46d0-a4f3-9496526234e6",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_3e8fcaff-07bc-408d-a232-1c46120fd0ae",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState2",
+              "label": "Истекшийе по сроку инв.",
+              "parentLabel": "Истекшийе по сроку инв.(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_db5ef530-d364-4103-8bca-b19ee67f17fc",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_987bfe07-fffb-4e1f-9edd-731f53be09b1",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showChildToAdultsMedakt",
+              "label": "Достигшие 18 лет",
+              "parentLabel": "Достигшие 18"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_234b8or4-b9fd-1e58-7gaq-ut863gf9yre1",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showChildIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_655b9ll8-t3bw-4u49-9uio-ol524yn9lda3",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "searchChildMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6745c29e-e7a6-4cf8-b7c0-0c5ef9db1eec",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "exportChildMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Дт)"
+            }  
+            
+          ]
+        },
+        {
+          "name": "complaintsAppeals",
+          "label": "Жалобы/Аппеляции",
+          "state": false,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_998t8aa1-a0bf-4b58-9lsa-eb633dd9uwmn",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Создать жалобу",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_112t2qq6-a7bf-4b36-9lsa-eb617lk9lkas",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Поиск жалоб",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_862t9qw1-a0qf-4b58-4lsa-eb633dd9ksat",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Создать аппеляцию",
+              "parentLabel": "Аппеляции"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_637t5yt9-a7bf-4b36-9qo-eb637lk9iqpf",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Поиск аппеляций",
+              "parentLabel": "Аппеляции"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Operator": [
+    {
+      "name": "CISSA",
+      "label": "МСЭК",
+      "state": true,
+      "level2": [
+        {
+          "commandType": "launchProcess",
+          "processKey": "process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae",
+          "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+          "name": "createAdultsRegForm",
+          "label": "Поиск",
+          "parentLabel": "Поиск/Рег-я"
+        },
+        {
+          "name": "adultsMedakt",
+          "label": "Мед. акт взрослый",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_322b2aa8-a0bf-4b58-9eed-eb962dd9dba2",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_865b2ea8-a9bf-7b58-9eed-eb524dd9dba9",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_258b2ea8-b9bv-9e58-6eed-ub520dd9dba3",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f72b6fb6-6ad1-42b4-9288-aa61b775991b",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f0999b4d-684f-4bff-bd85-31ca3b4b4336",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState2",
+              "label": "Истекшие по сроку инв.",
+              "parentLabel": "Истекшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6fed8290-f7e2-4a8c-9a19-5bd9191011dc",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_96349d16-005a-47d9-9052-f1d0052da490",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState4",
+              "label": "Перешедшие на воз-ю пенсию",
+              "parentLabel": "На воз-й пенсии(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_365b8ea4-b5bv-1e58-7eew-ut520gf9dba5",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_121b2ea8-t3bw-2b46-9ppp-ol524ra9dba5",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "searchAdultsMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_e0bf08ea-cf82-402b-96fd-40d85ffdbccb",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "exportAdultsMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_c8efe1da-271b-4e91-a161-cb9fbd9a584d",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Вз)"
+            }
+          ]
+        },
+        {
+          "name": "childMedakt",
+          "label": "Мед. акт детский",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_654b7er9-a0bf-6b58-3eed-sd369jj9dba1",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_357b7ea8-a9bf-7b58-9gaw-er964dd9mnb9",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_203b2yt8-b7kv-1e45-6rrt-ub403kj9dla0",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_d126f203-fac5-4f3b-a29c-b583babe0578",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_a71df8dc-fd84-46d0-a4f3-9496526234e6",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_3e8fcaff-07bc-408d-a232-1c46120fd0ae",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState2",
+              "label": "Истекшийе по сроку инв.",
+              "parentLabel": "Истекшийе по сроку инв.(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_db5ef530-d364-4103-8bca-b19ee67f17fc",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_987bfe07-fffb-4e1f-9edd-731f53be09b1",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showChildToAdultsMedakt",
+              "label": "Достигшие 18 лет",
+              "parentLabel": "Достигшие 18"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_234b8or4-b9fd-1e58-7gaq-ut863gf9yre1",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showChildIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_655b9ll8-t3bw-4u49-9uio-ol524yn9lda3",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "searchChildMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6745c29e-e7a6-4cf8-b7c0-0c5ef9db1eec",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "exportChildMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Дт)"
+            }  
+            
+          ]
+        },
+        {
+          "name": "complaintsAppeals",
+          "label": "Жалобы/Аппеляции",
+          "state": false,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_998t8aa1-a0bf-4b58-9lsa-eb633dd9uwmn",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Создать жалобу",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_112t2qq6-a7bf-4b36-9lsa-eb617lk9lkas",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Поиск жалоб",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_862t9qw1-a0qf-4b58-4lsa-eb633dd9ksat",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Создать аппеляцию",
+              "parentLabel": "Аппеляции"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_637t5yt9-a7bf-4b36-9qo-eb637lk9iqpf",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Поиск аппеляций",
+              "parentLabel": "Аппеляции"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commandType": "launchProcess",
+      "processKey": "process_696b2oi8-t2ew-2b34-9gfq-ol367ra8ajn5",
+      "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+      "name": "transferAdultsMedakt",
+      "label": "Перевод мед. актов",
+      "parentLabel": "Перевод"
+    }
+  ],
+  "Superviser": [
+    {
+      "name": "CISSA",
+      "label": "МСЭК",
+      "state": true,
+      "level2": [
+        {
+          "commandType": "launchProcess",
+          "processKey": "process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae",
+          "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+          "name": "createAdultsRegForm",
+          "label": "Поиск",
+          "parentLabel": "Поиск/Рег-я"
+        },
+        {
+          "name": "adultsMedakt",
+          "label": "Мед. акт взрослый",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_322b2aa8-a0bf-4b58-9eed-eb962dd9dba2",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_865b2ea8-a9bf-7b58-9eed-eb524dd9dba9",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_258b2ea8-b9bv-9e58-6eed-ub520dd9dba3",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f72b6fb6-6ad1-42b4-9288-aa61b775991b",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f0999b4d-684f-4bff-bd85-31ca3b4b4336",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState2",
+              "label": "Истекшие по сроку инв.",
+              "parentLabel": "Истекшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6fed8290-f7e2-4a8c-9a19-5bd9191011dc",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_96349d16-005a-47d9-9052-f1d0052da490",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState4",
+              "label": "Перешедшие на воз-ю пенсию",
+              "parentLabel": "На воз-й пенсии(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_365b8ea4-b5bv-1e58-7eew-ut520gf9dba5",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_121b2ea8-t3bw-2b46-9ppp-ol524ra9dba5",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "searchAdultsMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_e0bf08ea-cf82-402b-96fd-40d85ffdbccb",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "exportAdultsMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_c8efe1da-271b-4e91-a161-cb9fbd9a584d",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Вз)"
+            }
+          ]
+        },
+        {
+          "name": "childMedakt",
+          "label": "Мед. акт детский",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_654b7er9-a0bf-6b58-3eed-sd369jj9dba1",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_357b7ea8-a9bf-7b58-9gaw-er964dd9mnb9",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_203b2yt8-b7kv-1e45-6rrt-ub403kj9dla0",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_d126f203-fac5-4f3b-a29c-b583babe0578",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_a71df8dc-fd84-46d0-a4f3-9496526234e6",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_3e8fcaff-07bc-408d-a232-1c46120fd0ae",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState2",
+              "label": "Истекшийе по сроку инв.",
+              "parentLabel": "Истекшийе по сроку инв.(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_db5ef530-d364-4103-8bca-b19ee67f17fc",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_987bfe07-fffb-4e1f-9edd-731f53be09b1",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showChildToAdultsMedakt",
+              "label": "Достигшие 18 лет",
+              "parentLabel": "Достигшие 18"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_234b8or4-b9fd-1e58-7gaq-ut863gf9yre1",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showChildIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_655b9ll8-t3bw-4u49-9uio-ol524yn9lda3",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "searchChildMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6745c29e-e7a6-4cf8-b7c0-0c5ef9db1eec",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "exportChildMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Дт)"
+            }  
+            
+          ]
+        },
+        {
+          "name": "complaintsAppeals",
+          "label": "Жалобы/Аппеляции",
+          "state": false,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_998t8aa1-a0bf-4b58-9lsa-eb633dd9uwmn",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Создать жалобу",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_112t2qq6-a7bf-4b36-9lsa-eb617lk9lkas",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Поиск жалоб",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_862t9qw1-a0qf-4b58-4lsa-eb633dd9ksat",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Создать аппеляцию",
+              "parentLabel": "Аппеляции"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_637t5yt9-a7bf-4b36-9qo-eb637lk9iqpf",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Поиск аппеляций",
+              "parentLabel": "Аппеляции"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Registrator": [
+    {
+      "name": "CISSA",
+      "label": "МСЭК",
+      "state": true,
+      "level2": [
+        {
+          "commandType": "launchProcess",
+          "processKey": "process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae",
+          "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+          "name": "createAdultsRegForm",
+          "label": "Поиск",
+          "parentLabel": "Поиск/Рег-я"
+        },
+        {
+          "name": "adultsMedakt",
+          "label": "Мед. акт взрослый",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_322b2aa8-a0bf-4b58-9eed-eb962dd9dba2",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_865b2ea8-a9bf-7b58-9eed-eb524dd9dba9",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_258b2ea8-b9bv-9e58-6eed-ub520dd9dba3",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f72b6fb6-6ad1-42b4-9288-aa61b775991b",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f0999b4d-684f-4bff-bd85-31ca3b4b4336",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState2",
+              "label": "Истекшие по сроку инв.",
+              "parentLabel": "Истекшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6fed8290-f7e2-4a8c-9a19-5bd9191011dc",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_96349d16-005a-47d9-9052-f1d0052da490",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState4",
+              "label": "Перешедшие на воз-ю пенсию",
+              "parentLabel": "На воз-й пенсии(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_365b8ea4-b5bv-1e58-7eew-ut520gf9dba5",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_121b2ea8-t3bw-2b46-9ppp-ol524ra9dba5",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "searchAdultsMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_c8efe1da-271b-4e91-a161-cb9fbd9a584d",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Вз)"
+            }
+          ]
+        },
+        {
+          "name": "childMedakt",
+          "label": "Мед. акт детский",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_654b7er9-a0bf-6b58-3eed-sd369jj9dba1",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_357b7ea8-a9bf-7b58-9gaw-er964dd9mnb9",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_203b2yt8-b7kv-1e45-6rrt-ub403kj9dla0",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_d126f203-fac5-4f3b-a29c-b583babe0578",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_a71df8dc-fd84-46d0-a4f3-9496526234e6",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_3e8fcaff-07bc-408d-a232-1c46120fd0ae",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState2",
+              "label": "Истекшийе по сроку инв.",
+              "parentLabel": "Истекшийе по сроку инв.(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_db5ef530-d364-4103-8bca-b19ee67f17fc",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_987bfe07-fffb-4e1f-9edd-731f53be09b1",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showChildToAdultsMedakt",
+              "label": "Достигшие 18 лет",
+              "parentLabel": "Достигшие 18"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_234b8or4-b9fd-1e58-7gaq-ut863gf9yre1",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showChildIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_655b9ll8-t3bw-4u49-9uio-ol524yn9lda3",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "searchChildMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6745c29e-e7a6-4cf8-b7c0-0c5ef9db1eec",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "exportChildMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Дт)"
+            }  
+            
+          ]
+        },
+        {
+          "name": "complaintsAppeals",
+          "label": "Жалобы/Аппеляции",
+          "state": false,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_998t8aa1-a0bf-4b58-9lsa-eb633dd9uwmn",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Создать жалобу",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_112t2qq6-a7bf-4b36-9lsa-eb617lk9lkas",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Поиск жалоб",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_862t9qw1-a0qf-4b58-4lsa-eb633dd9ksat",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Создать аппеляцию",
+              "parentLabel": "Аппеляции"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_637t5yt9-a7bf-4b36-9qo-eb637lk9iqpf",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Поиск аппеляций",
+              "parentLabel": "Аппеляции"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Center": [
+    {
+      "name": "CISSA",
+      "label": "МСЭК",
+      "state": true,
+      "level2": [
+        {
+          "commandType": "launchProcess",
+          "processKey": "process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae",
+          "docDef": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+          "name": "createAdultsRegForm",
+          "label": "Поиск",
+          "parentLabel": "Поиск/Рег-я"
+        },
+        {
+          "name": "adultsMedakt",
+          "label": "Мед. акт взрослый",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_322b2aa8-a0bf-4b58-9eed-eb962dd9dba2",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_865b2ea8-a9bf-7b58-9eed-eb524dd9dba9",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_258b2ea8-b9bv-9e58-6eed-ub520dd9dba3",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f72b6fb6-6ad1-42b4-9288-aa61b775991b",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_f0999b4d-684f-4bff-bd85-31ca3b4b4336",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState2",
+              "label": "Истекшие по сроку инв.",
+              "parentLabel": "Истекшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6fed8290-f7e2-4a8c-9a19-5bd9191011dc",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_96349d16-005a-47d9-9052-f1d0052da490",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showAdultsDetailedeFormState4",
+              "label": "Перешедшие на воз-ю пенсию",
+              "parentLabel": "На воз-й пенсии(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_365b8ea4-b5bv-1e58-7eew-ut520gf9dba5",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_121b2ea8-t3bw-2b46-9ppp-ol524ra9dba5",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "searchAdultsMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_e0bf08ea-cf82-402b-96fd-40d85ffdbccb",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "exportAdultsMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_c8efe1da-271b-4e91-a161-cb9fbd9a584d",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Вз)"
+            }
+          ]
+        },
+        {
+          "name": "childMedakt",
+          "label": "Мед. акт детский",
+          "state": true,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_654b7er9-a0bf-6b58-3eed-sd369jj9dba1",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildRegFormOnRegistration",
+              "label": "На регистрации",
+              "parentLabel": "На регистрации(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_357b7ea8-a9bf-7b58-9gaw-er964dd9mnb9",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormRegistred",
+              "label": "Зарегистрированные",
+              "parentLabel": "Зарегистрированные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_203b2yt8-b7kv-1e45-6rrt-ub403kj9dla0",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedFormSigned",
+              "label": "Подписаные",
+              "parentLabel": "Подписаные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_d126f203-fac5-4f3b-a29c-b583babe0578",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildDetailedeFormDied",
+              "label": "Умершие",
+              "parentLabel": "Умершие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_a71df8dc-fd84-46d0-a4f3-9496526234e6",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState1",
+              "label": "Приостановленные инв.",
+              "parentLabel": "Приостановленные(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_3e8fcaff-07bc-408d-a232-1c46120fd0ae",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState2",
+              "label": "Истекшийе по сроку инв.",
+              "parentLabel": "Истекшийе по сроку инв.(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_db5ef530-d364-4103-8bca-b19ee67f17fc",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "showChildsDetailedeFormState3",
+              "label": "Переехавшие инв.",
+              "parentLabel": "Переехавшие(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_987bfe07-fffb-4e1f-9edd-731f53be09b1",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "showChildToAdultsMedakt",
+              "label": "Достигшие 18 лет",
+              "parentLabel": "Достигшие 18"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_234b8or4-b9fd-1e58-7gaq-ut863gf9yre1",
+              "docDef": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+              "name": "showChildIPRSearchForm",
+              "label": "ИПР",
+              "parentLabel": "ИПР(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_655b9ll8-t3bw-4u49-9uio-ol524yn9lda3",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "searchChildMedakt",
+              "label": "Поиск мед. акт",
+              "parentLabel": "мед. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_6745c29e-e7a6-4cf8-b7c0-0c5ef9db1eec",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "exportChildMedakt",
+              "label": "Выгрузка мед. акт",
+              "parentLabel": "Выгрузка. акт(Дт)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "trashAdultsMedakt",
+              "label": "Корзина мед. акт",
+              "parentLabel": "Корзина(Дт)"
+            }  
+            
+          ]
+        },
+        {
+          "name": "complaintsAppeals",
+          "label": "Жалобы/Аппеляции",
+          "state": false,
+          "level3": [
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_998t8aa1-a0bf-4b58-9lsa-eb633dd9uwmn",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Создать жалобу",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_112t2qq6-a7bf-4b36-9lsa-eb617lk9lkas",
+              "docDef": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+              "name": "showComplaintsForm",
+              "label": "Поиск жалоб",
+              "parentLabel": "Жалобы"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_862t9qw1-a0qf-4b58-4lsa-eb633dd9ksat",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Создать аппеляцию",
+              "parentLabel": "Аппеляции"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_637t5yt9-a7bf-4b36-9qo-eb637lk9iqpf",
+              "docDef": "D347796D-3232-49B0-886D-FAEE1F10B923",
+              "name": "showAppealsForm",
+              "label": "Поиск аппеляций",
+              "parentLabel": "Аппеляции"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

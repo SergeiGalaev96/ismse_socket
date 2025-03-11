@@ -1,0 +1,93 @@
+{
+  "formName": "createUserForm",
+  "label": "Форма создания новых пользователей",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "UserData",
+      "label": "Данные",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "userRole",
+          "label": "Роль",
+          "enumDef": "EEDA55F0-35AC-4424-8E48-20C4963F3BC7",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "organizationId",
+          "label": "Наименование МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "username",
+          "label": "Логин",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "firstName",
+          "label": "Фамилия",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "lastName",
+          "label": "Имя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "email",
+          "label": "Email",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "address",
+          "label": "Адрес",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "phone",
+          "label": "Телефон",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "signDocument",
+          "label": "Подписание документов",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "changeStatus",
+          "label": "Изменение статусов",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

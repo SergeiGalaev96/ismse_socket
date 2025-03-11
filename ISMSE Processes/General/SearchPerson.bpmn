@@ -1,0 +1,1720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1nqnakt" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <bpmn:process id="process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae" name="SearchPerson" isExecutable="true" camunda:historyTimeToLive="1">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>SequenceFlow_1drgbt4</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_16o215j">
+      <bpmn:incoming>Flow_0rg1p71</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0fxlw4g</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0xtg4bg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1pbl9cv</bpmn:outgoing>
+      <bpmn:outgoing>Flow_05zubsh</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1h9er46</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1v3dgqi">
+      <bpmn:incoming>SequenceFlow_1rtwkuq</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1qf6zjh</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_080dahq</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0qs2e6x</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1t3ywz8</bpmn:outgoing>
+      <bpmn:outgoing>Flow_03b212a</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="ServiceTask_1ccr52r" name="Set state &#34;On Registration&#34;">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/SetState?docId=${docId}&amp;stateTypeId=58A0384C-F95A-4FBC-BF21-2BA1B61A3647&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="result">
+              <camunda:script scriptFormat="Javascript">S(response)</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_13xyia8</bpmn:incoming>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0fxlw4g" name="edit" sourceRef="ExclusiveGateway_16o215j" targetRef="Activity_0q9xb3u">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "editDocument" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1rtwkuq" sourceRef="Activity_1rsf9ij" targetRef="ExclusiveGateway_1v3dgqi" />
+    <bpmn:sequenceFlow id="SequenceFlow_080dahq" name="create" sourceRef="ExclusiveGateway_1v3dgqi" targetRef="Activity_0qkmtdu">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "createDocument" &amp;&amp; adult == "True" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1drgbt4" sourceRef="StartEvent_1" targetRef="Activity_1i2kem3" />
+    <bpmn:endEvent id="EndEvent_0v5wp28">
+      <bpmn:incoming>SequenceFlow_0xtg4bg</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_109cix0</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1t3ywz8</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0onhqrk</bpmn:incoming>
+      <bpmn:incoming>Flow_1x356vi</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_0pe3csp" name="finish" sourceRef="Gateway_1hyyf75" targetRef="Activity_1i2kem3">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "finish" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0qs2e6x" name="back" sourceRef="ExclusiveGateway_1v3dgqi" targetRef="Activity_1i2kem3">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "back" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0xtg4bg" name="cancel" sourceRef="ExclusiveGateway_16o215j" targetRef="EndEvent_0v5wp28">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="ServiceTask_1v2m0ia" name="Get PersonData">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/GetDocumentById/?id=${docId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="person">
+              <camunda:script scriptFormat="Javascript">response</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0habdxn</bpmn:incoming>
+      <bpmn:incoming>Flow_05zubsh</bpmn:incoming>
+      <bpmn:incoming>Flow_1sm6o54</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0wrfepu</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1t3ywz8" name="cancel" sourceRef="ExclusiveGateway_1v3dgqi" targetRef="EndEvent_0v5wp28">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_109cix0" name="cancel" sourceRef="Gateway_1hyyf75" targetRef="EndEvent_0v5wp28">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1qf6zjh" sourceRef="Activity_038d8vv" targetRef="ExclusiveGateway_1v3dgqi" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_1ha2y2n">
+      <bpmn:incoming>SequenceFlow_0wrfepu</bpmn:incoming>
+      <bpmn:incoming>Flow_1gw8y36</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_079toej</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1amgj8j</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1x356vi</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0wrfepu" sourceRef="ServiceTask_1v2m0ia" targetRef="ExclusiveGateway_1ha2y2n" />
+    <bpmn:sequenceFlow id="SequenceFlow_079toej" name="adult" sourceRef="ExclusiveGateway_1ha2y2n" targetRef="ScriptTask_1sqh8gw">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{adult == "True"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_1amgj8j" name="child" sourceRef="ExclusiveGateway_1ha2y2n" targetRef="ScriptTask_1i5d5cw">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{adult == "False"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="ScriptTask_1i5d5cw" name="taskType, formType" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>SequenceFlow_1amgj8j</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1mtvd6q</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showChildRegForm")
+execution.setVariable("form", "ChildRegistrationForm")
+execution.setVariable("regForm", "ChildRegistrationForm")
+execution.setVariable("buttons", "CreateRegFormButtons")
+execution.setVariable("formType", "edit")
+execution.setVariable("gridForm", "null")
+execution.setVariable("gridFormButtons", "null")
+execution.setVariable("docList", "null")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1mtvd6q" sourceRef="ScriptTask_1i5d5cw" targetRef="Activity_038d8vv" />
+    <bpmn:scriptTask id="ScriptTask_1sqh8gw" name="taskType, formType" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>SequenceFlow_079toej</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0yvgszu</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showRegForm")
+execution.setVariable("form", "AdultsRegistrationForm")
+execution.setVariable("regForm", "AdultsRegistrationForm")
+execution.setVariable("buttons", "CreateRegFormButtons")
+execution.setVariable("formType", "edit")
+execution.setVariable("gridForm", "null")
+execution.setVariable("gridFormButtons", "null")
+execution.setVariable("docList", "null")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="SequenceFlow_0yvgszu" sourceRef="ScriptTask_1sqh8gw" targetRef="Activity_1rsf9ij" />
+    <bpmn:scriptTask id="ScriptTask_1t605j4" name="Variables" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_1hir5o8</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_11wpvkx</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showMemoForm")
+execution.setVariable("form", "memoForm")
+execution.setVariable("buttons", "MemoButtons")
+execution.setVariable("formType", "edit")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="SequenceFlow_11wpvkx" sourceRef="ScriptTask_1t605j4" targetRef="Activity_0qwmo1t" />
+    <bpmn:exclusiveGateway id="ExclusiveGateway_0oelk0c">
+      <bpmn:incoming>Flow_1g4qgi4</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_0lmsbvp</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0onhqrk</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="SequenceFlow_0lmsbvp" name="RegForm" sourceRef="ExclusiveGateway_0oelk0c" targetRef="Gateway_02j1gc9">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "viewRegForm" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="SequenceFlow_0onhqrk" sourceRef="ExclusiveGateway_0oelk0c" targetRef="EndEvent_0v5wp28">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="Activity_1i2kem3" name="Variables" scriptFormat="Javascript">
+      <bpmn:incoming>SequenceFlow_1drgbt4</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0pe3csp</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_0qs2e6x</bpmn:incoming>
+      <bpmn:incoming>Flow_1ep7swr</bpmn:incoming>
+      <bpmn:incoming>Flow_0lbd930</bpmn:incoming>
+      <bpmn:incoming>Flow_0gzma09</bpmn:incoming>
+      <bpmn:outgoing>Flow_1lq86kl</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showPersonForm")
+execution.setVariable("form", "personSearchForm")
+execution.setVariable("buttons", "PersonSearchDocumentButtons")
+execution.setVariable("gridForm", "personGridForm")
+execution.setVariable("gridFormButtons", "PersonSearchDocumentGridFormButtons")
+execution.setVariable("page", "1")
+execution.setVariable("size", "10")
+execution.setVariable("docDef", "6052978A-1ECB-4F96-A16B-93548936AFC0")
+execution.setVariable("userAction", "null")
+execution.setVariable("selectedDoc", "null")
+execution.setVariable("docId", "null")
+execution.setVariable("formType", "edit")
+execution.setVariable("doc", "{}")
+execution.setVariable("person", "null")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1lq86kl" sourceRef="Activity_1i2kem3" targetRef="Activity_0kbcfyq" />
+    <bpmn:scriptTask id="Activity_0q9xb3u" name="Variables" scriptFormat="Javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>SequenceFlow_0fxlw4g</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pgqitx</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showPersonForm")
+execution.setVariable("form", "personViewForm")
+execution.setVariable("buttons", "PersonViewEditDocumentButtons")
+execution.setVariable("gridForm", "null")
+execution.setVariable("gridFormButtons", "null")
+execution.setVariable("docList", "null")
+execution.setVariable("page", 1)
+execution.setVariable("size", 10)
+execution.setVariable("formType", "edit")
+execution.setVariable("doc", "null")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Activity_0kbcfyq" name="Get list of documents by def ID">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/FilterDocumentsByDefId?defId=${docDef}&amp;size=${size}&amp;page=${page}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${doc}</camunda:inputParameter>
+            <camunda:outputParameter name="docList">
+              <camunda:script scriptFormat="Javascript">S(response)</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0q2enjt</bpmn:incoming>
+      <bpmn:incoming>Flow_1lq86kl</bpmn:incoming>
+      <bpmn:outgoing>Flow_0eybjop</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0eybjop" sourceRef="Activity_0kbcfyq" targetRef="Activity_0f7fwu3" />
+    <bpmn:userTask id="Activity_0f7fwu3" name="return document list">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0eybjop</bpmn:incoming>
+      <bpmn:outgoing>Flow_0rg1p71</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_0rg1p71" sourceRef="Activity_0f7fwu3" targetRef="ExclusiveGateway_16o215j" />
+    <bpmn:scriptTask id="Activity_03lmpts" name="Variables" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_1h9er46</bpmn:incoming>
+      <bpmn:incoming>Flow_01amhku</bpmn:incoming>
+      <bpmn:outgoing>Flow_0pyartl</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showPersonFormNRSZ")
+execution.setVariable("taskType", "showPersonForm")
+execution.setVariable("form", "personViewFormNRSZ")
+execution.setVariable("buttons", "PersonCreateDocumentButtons")
+execution.setVariable("gridForm", "null")
+execution.setVariable("gridFormButtons", "null")
+execution.setVariable("docList", "null")
+execution.setVariable("selectedDoc", doc)
+execution.setVariable("docId", "null")
+execution.setVariable("formType", "edit")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:exclusiveGateway id="Gateway_0kp5rqf">
+      <bpmn:incoming>Flow_1fzgaru</bpmn:incoming>
+      <bpmn:outgoing>Flow_1z07z8d</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0gzma09</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1nnr8o4</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0pyartl" sourceRef="Activity_03lmpts" targetRef="Activity_0f52gw8" />
+    <bpmn:sequenceFlow id="Flow_1z07z8d" name="save" sourceRef="Gateway_0kp5rqf" targetRef="Activity_042xwva">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "saveDocument" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="Activity_0o2mbuk" name="Variables" scriptFormat="Javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_1pbl9cv</bpmn:incoming>
+      <bpmn:outgoing>Flow_0q2enjt</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("selectedDoc", doc)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1pbl9cv" name="find" sourceRef="ExclusiveGateway_16o215j" targetRef="Activity_0o2mbuk">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "findDocument" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0q2enjt" sourceRef="Activity_0o2mbuk" targetRef="Activity_0kbcfyq" />
+    <bpmn:serviceTask id="Activity_0e0gxys" name="Update documennt">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/Update?id=${docId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">PUT</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${doc}</camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0xytxxg</bpmn:incoming>
+      <bpmn:outgoing>Flow_0habdxn</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Activity_0pnpa1p" name="Get selected document by id">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/GetDocumentById/?id=${docId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="selectedDoc">
+              <camunda:script scriptFormat="Javascript">S(response)</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0pgqitx</bpmn:incoming>
+      <bpmn:outgoing>Flow_1alwc95</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0pgqitx" sourceRef="Activity_0q9xb3u" targetRef="Activity_0pnpa1p" />
+    <bpmn:sequenceFlow id="Flow_1alwc95" sourceRef="Activity_0pnpa1p" targetRef="Activity_1u6o7lc" />
+    <bpmn:exclusiveGateway id="Gateway_03dpnr3">
+      <bpmn:incoming>Flow_1g5sgmn</bpmn:incoming>
+      <bpmn:outgoing>Flow_0xytxxg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0vdb81s</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0lbd930</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0r4rv3z</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0xytxxg" name="update" sourceRef="Gateway_03dpnr3" targetRef="Activity_0e0gxys">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction == "updateDocument"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0habdxn" sourceRef="Activity_0e0gxys" targetRef="ServiceTask_1v2m0ia" />
+    <bpmn:sequenceFlow id="Flow_05zubsh" name="select Person" sourceRef="ExclusiveGateway_16o215j" targetRef="ServiceTask_1v2m0ia">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "selectDocument"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_03z7mxe" name="Delete document">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/Delete/?id=${docId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">DELETE</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0vdb81s</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ep7swr</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0vdb81s" name="delete" sourceRef="Gateway_03dpnr3" targetRef="Activity_03z7mxe">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction == "deleteDocument"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1ep7swr" sourceRef="Activity_03z7mxe" targetRef="Activity_1i2kem3" />
+    <bpmn:sequenceFlow id="Flow_1g5sgmn" sourceRef="Activity_1u6o7lc" targetRef="Gateway_03dpnr3" />
+    <bpmn:sequenceFlow id="Flow_0lbd930" name="back" sourceRef="Gateway_03dpnr3" targetRef="Activity_1i2kem3">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "back"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1h9er46" name="create Person" sourceRef="ExclusiveGateway_16o215j" targetRef="Activity_03lmpts">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "createDocument" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1sm6o54" sourceRef="Activity_1251abc" targetRef="ServiceTask_1v2m0ia" />
+    <bpmn:sequenceFlow id="Flow_0gzma09" name="back" sourceRef="Gateway_0kp5rqf" targetRef="Activity_1i2kem3">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "back"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:userTask id="Activity_038d8vv" name="Show Child Reg form">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_1mtvd6q</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1qf6zjh</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1rsf9ij" name="Show Adults Reg form">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0yvgszu</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1rtwkuq</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_1nia1gg">
+      <bpmn:incoming>Flow_1nnr8o4</bpmn:incoming>
+      <bpmn:incoming>Flow_0r4rv3z</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1nnr8o4" name="cancel" sourceRef="Gateway_0kp5rqf" targetRef="Event_1nia1gg">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:serviceTask id="Activity_0qkmtdu" name="Create Adult Medakt">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/CreateAdult?userId=${userId}
+
+</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${doc}</camunda:inputParameter>
+            <camunda:outputParameter name="createdDoc">
+              <camunda:script scriptFormat="Javascript">S(response)</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_080dahq</bpmn:incoming>
+      <bpmn:outgoing>Flow_01fkpl7</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_01fkpl7" sourceRef="Activity_0qkmtdu" targetRef="Activity_0e0fwk7" />
+    <bpmn:userTask id="Activity_0qwmo1t" name="Show Memo Form">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_11wpvkx</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g4qgi4</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1g4qgi4" sourceRef="Activity_0qwmo1t" targetRef="ExclusiveGateway_0oelk0c" />
+    <bpmn:serviceTask id="Activity_1aa1b8n" name="Get selected document by id">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/GetDocumentById/?id=${docId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">GET</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:outputParameter name="selectedDoc">
+              <camunda:script scriptFormat="Javascript">S(response)</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1nvep3e</bpmn:incoming>
+      <bpmn:incoming>Flow_1iulqsr</bpmn:incoming>
+      <bpmn:incoming>Flow_0ip6sav</bpmn:incoming>
+      <bpmn:incoming>Flow_0yhuyd3</bpmn:incoming>
+      <bpmn:outgoing>Flow_10jvugq</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gateway_1hyyf75">
+      <bpmn:incoming>Flow_12s9m20</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ebhuo4</bpmn:outgoing>
+      <bpmn:outgoing>Flow_10v0z0a</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1u8lalj</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_0pe3csp</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_109cix0</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Activity_196o3j9" name="show selected document">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_10jvugq</bpmn:incoming>
+      <bpmn:outgoing>Flow_12s9m20</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_10jvugq" sourceRef="Activity_1aa1b8n" targetRef="Activity_196o3j9" />
+    <bpmn:sequenceFlow id="Flow_12s9m20" sourceRef="Activity_196o3j9" targetRef="Gateway_1hyyf75" />
+    <bpmn:scriptTask id="Activity_1vmjski" name="Variables" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_045egj0</bpmn:incoming>
+      <bpmn:incoming>Flow_1u8lalj</bpmn:incoming>
+      <bpmn:outgoing>Flow_1nvep3e</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("buttons", "ViewRegFormButtons")
+execution.setVariable("formType", "view")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Activity_1izn50y" name="Update documennt">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/Update?id=${docId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">PUT</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${doc}</camunda:inputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1ebhuo4</bpmn:incoming>
+      <bpmn:outgoing>Flow_045egj0</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_045egj0" sourceRef="Activity_1izn50y" targetRef="Activity_1vmjski" />
+    <bpmn:sequenceFlow id="Flow_1nvep3e" sourceRef="Activity_1vmjski" targetRef="Activity_1aa1b8n" />
+    <bpmn:sequenceFlow id="Flow_1ebhuo4" name="update" sourceRef="Gateway_1hyyf75" targetRef="Activity_1izn50y">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "updateDocument"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="Activity_0wtw1jt" name="Variables" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_10v0z0a</bpmn:incoming>
+      <bpmn:outgoing>Flow_1iulqsr</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("buttons", "UpdateRegFormButtons")
+execution.setVariable("formType", "edit")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1iulqsr" sourceRef="Activity_0wtw1jt" targetRef="Activity_1aa1b8n" />
+    <bpmn:sequenceFlow id="Flow_10v0z0a" name="edit" sourceRef="Gateway_1hyyf75" targetRef="Activity_0wtw1jt">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "editDocument" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1u8lalj" name="back" sourceRef="Gateway_1hyyf75" targetRef="Activity_1vmjski">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "back" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:exclusiveGateway id="Gateway_02j1gc9">
+      <bpmn:incoming>SequenceFlow_0lmsbvp</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ggumrq</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0xxzqme</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:scriptTask id="Activity_1csvyzf" name="Variables" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_1ggumrq</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yhuyd3</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showRegForm")
+execution.setVariable("form", "AdultsRegistrationForm")
+execution.setVariable("buttons", "ViewRegFormButtons")
+execution.setVariable("formType", "view")
+execution.setVariable("doc", "null")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Activity_01wsdxd" name="Variables" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_0xxzqme</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ip6sav</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("taskType", "showChildRegForm")
+execution.setVariable("form", "ChildRegistrationForm")
+execution.setVariable("buttons", "ViewRegFormButtons")
+execution.setVariable("formType", "view")
+execution.setVariable("doc", "null")</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1ggumrq" name="adult" sourceRef="Gateway_02j1gc9" targetRef="Activity_1csvyzf">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{adult == "True"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0xxzqme" name="child" sourceRef="Gateway_02j1gc9" targetRef="Activity_01wsdxd">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{adult == "False"}</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0ip6sav" sourceRef="Activity_01wsdxd" targetRef="Activity_1aa1b8n" />
+    <bpmn:sequenceFlow id="Flow_0yhuyd3" sourceRef="Activity_1csvyzf" targetRef="Activity_1aa1b8n" />
+    <bpmn:scriptTask id="Activity_1yrw7i0" name="Get docId from createdDoc" scriptFormat="Javascript">
+      <bpmn:outgoing>Flow_13xyia8</bpmn:outgoing>
+      <bpmn:script>var strDocId = createdDoc.prop("id").toString()
+var finalDocId = strDocId.substring(1, strDocId.length-1)
+execution.setVariable("docId", finalDocId)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_13xyia8" sourceRef="Activity_1yrw7i0" targetRef="ServiceTask_1ccr52r" />
+    <bpmn:serviceTask id="Activity_042xwva" name="Create new document in NRSZ">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">http://192.168.0.68:5000/api/NrszPersons/AddNewPerson?regionNo=${regionNo}&amp;districtNo=${districtNo}</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${docNRSZ}</camunda:inputParameter>
+            <camunda:outputParameter name="createdDocNRSZ">
+              <camunda:script scriptFormat="Javascript">response</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1z07z8d</bpmn:incoming>
+      <bpmn:outgoing>Flow_02k7zwm</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:scriptTask id="Activity_1251abc" name="Get stringifiyed ID from createdDoc2" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_18e50qi</bpmn:incoming>
+      <bpmn:outgoing>Flow_1sm6o54</bpmn:outgoing>
+      <bpmn:script>var strDocId = createdDoc2.prop("id").toString()
+var finalDocId = strDocId.substring(1, strDocId.length-1)
+execution.setVariable("docId", finalDocId)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Activity_162tmm5" name="Create new person ISMSE">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/Create?defId=${docDefId}&amp;userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${document2}</camunda:inputParameter>
+            <camunda:outputParameter name="createdDoc2">
+              <camunda:script scriptFormat="Javascript">S(response)</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1gj10ro</bpmn:incoming>
+      <bpmn:outgoing>Flow_18e50qi</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:scriptTask id="Activity_0jtwv4j" name="GET PIN from NRSZ doc" scriptFormat="javascript">
+      <bpmn:incoming>Flow_0v8oz5y</bpmn:incoming>
+      <bpmn:outgoing>Flow_01jrahg</bpmn:outgoing>
+      <bpmn:script>var createdPIN = S(createdDocNRSZ).prop("data").prop("ResultPIN").toString()
+var finalPIN = createdPIN.substring(1, createdPIN.length-1)
+execution.setVariable("createdPIN", finalPIN);</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:scriptTask id="Activity_0dd764b" name="Push PIN to new Doc" scriptFormat="javascript">
+      <bpmn:incoming>Flow_01jrahg</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gj10ro</bpmn:outgoing>
+      <bpmn:script>var newPIN = {
+"name": "IIN", 
+"type": "Text", 
+"value": createdPIN
+}
+var Attributes = S(doc).prop("attributes").append(newPIN)
+var finalDoc = S(doc).prop("attributes", Attributes)
+execution.setVariable("document2", finalDoc.toString())</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_02k7zwm" sourceRef="Activity_042xwva" targetRef="Activity_1l8z6d1" />
+    <bpmn:sequenceFlow id="Flow_18e50qi" sourceRef="Activity_162tmm5" targetRef="Activity_1251abc" />
+    <bpmn:sequenceFlow id="Flow_1gj10ro" sourceRef="Activity_0dd764b" targetRef="Activity_162tmm5" />
+    <bpmn:sequenceFlow id="Flow_01jrahg" sourceRef="Activity_0jtwv4j" targetRef="Activity_0dd764b" />
+    <bpmn:sequenceFlow id="Flow_1fzgaru" sourceRef="Activity_0f52gw8" targetRef="Gateway_0kp5rqf" />
+    <bpmn:userTask id="Activity_0f52gw8" name="show selected document">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0pyartl</bpmn:incoming>
+      <bpmn:outgoing>Flow_1fzgaru</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_1u6o7lc" name="show selected Person">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="com.camunda.RabbitMQ.Enqueue" event="create">
+          <camunda:field name="docList">
+            <camunda:expression>${docList}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="session_id">
+            <camunda:expression>${user_session_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="taskType">
+            <camunda:expression>${taskType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="process_id">
+            <camunda:expression>${process_id}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="selectedDoc">
+            <camunda:expression>${selectedDoc}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="formType">
+            <camunda:expression>${formType}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userAction">
+            <camunda:expression>${userAction}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docId">
+            <camunda:expression>${docId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="buttons">
+            <camunda:expression>${buttons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="docListIPR">
+            <camunda:expression>${docListIPR}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="person">
+            <camunda:expression>${person}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="size">
+            <camunda:expression>${size}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="page">
+            <camunda:expression>${page}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userRole">
+            <camunda:expression>${userRole}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="tabLabel">
+            <camunda:expression>${tabLabel}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="userId">
+            <camunda:expression>${userId}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridFormButtons">
+            <camunda:expression>${gridFormButtons}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="form">
+            <camunda:expression>${form}</camunda:expression>
+          </camunda:field>
+          <camunda:field name="gridForm">
+            <camunda:expression>${gridForm}</camunda:expression>
+          </camunda:field>
+        </camunda:taskListener>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1alwc95</bpmn:incoming>
+      <bpmn:outgoing>Flow_1g5sgmn</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:callActivity id="Activity_1l8z6d1" name="Call Toast" calledElement="CallToastNRSZ">
+      <bpmn:extensionElements>
+        <camunda:in variables="all" />
+        <camunda:in sourceExpression="Гражданин создан успешно" target="toastTextSuccess" />
+        <camunda:in sourceExpression="Ошибка поиска!" target="toastTextError" />
+        <camunda:in source="createdDocNRSZ" target="Response" />
+        <camunda:out source="result" target="result" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_02k7zwm</bpmn:incoming>
+      <bpmn:outgoing>Flow_1f3bej9</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:sequenceFlow id="Flow_1f3bej9" sourceRef="Activity_1l8z6d1" targetRef="Gateway_0j2bkn0" />
+    <bpmn:scriptTask id="Activity_19c5zp8" name="TestRes" scriptFormat="javascript">
+      <bpmn:script>var strRes = "{\"successFlag\": false, \"errorMessage\": {\"errorMessage\": \"Гражданин с таким ПИН не найден в базе НРСЗ\"}}"
+execution.setVariable("saveDocRes", strRes)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Activity_071o0dx" name="Create Child Medakt">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/CreateChild?userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${doc}</camunda:inputParameter>
+            <camunda:outputParameter name="createdDoc">
+              <camunda:script scriptFormat="Javascript">response</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_03b212a</bpmn:incoming>
+      <bpmn:outgoing>Flow_0o4pe5p</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_03b212a" sourceRef="ExclusiveGateway_1v3dgqi" targetRef="Activity_071o0dx">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "createDocument" &amp;&amp; adult == "False" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0o4pe5p" sourceRef="Activity_071o0dx" targetRef="Activity_0e0fwk7" />
+    <bpmn:scriptTask id="Activity_0ajpy1l" name="Get docId from createdDoc" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_1r04xfi</bpmn:incoming>
+      <bpmn:outgoing>Flow_1hir5o8</bpmn:outgoing>
+      <bpmn:script>var strDocId = S(createdDoc).prop("data").prop("id").toString()
+var finalDocId = strDocId.substring(1, strDocId.length-1)
+execution.setVariable("docId", finalDocId)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:callActivity id="Activity_0e0fwk7" name="Call Toast" calledElement="CallToastISMSE">
+      <bpmn:extensionElements>
+        <camunda:in variables="all" />
+        <camunda:in sourceExpression="Документ создан успешно!" target="toastTextSuccess" />
+        <camunda:in sourceExpression="Ошибка!" target="toastTextError" />
+        <camunda:in source="createdDoc" target="Response" />
+        <camunda:out source="result" target="result" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0o4pe5p</bpmn:incoming>
+      <bpmn:incoming>Flow_01fkpl7</bpmn:incoming>
+      <bpmn:outgoing>Flow_1etnygk</bpmn:outgoing>
+    </bpmn:callActivity>
+    <bpmn:exclusiveGateway id="Gateway_0gq75e0">
+      <bpmn:incoming>Flow_1etnygk</bpmn:incoming>
+      <bpmn:outgoing>Flow_1r04xfi</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0f7n7c4</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_1etnygk" sourceRef="Activity_0e0fwk7" targetRef="Gateway_0gq75e0" />
+    <bpmn:sequenceFlow id="Flow_1r04xfi" name="success" sourceRef="Gateway_0gq75e0" targetRef="Activity_0ajpy1l">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{result== "true" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0f7n7c4" name="error" sourceRef="Gateway_0gq75e0" targetRef="Activity_1sha477">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{result== "false" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1hir5o8" sourceRef="Activity_0ajpy1l" targetRef="ScriptTask_1t605j4" />
+    <bpmn:scriptTask id="Activity_1sha477" name="Step back" scriptFormat="Javascript">
+      <bpmn:incoming>Flow_0f7n7c4</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gw8y36</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("selectedDoc", doc)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_1gw8y36" sourceRef="Activity_1sha477" targetRef="ExclusiveGateway_1ha2y2n" />
+    <bpmn:exclusiveGateway id="Gateway_0j2bkn0">
+      <bpmn:incoming>Flow_1f3bej9</bpmn:incoming>
+      <bpmn:outgoing>Flow_0v8oz5y</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1yi862x</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:sequenceFlow id="Flow_0v8oz5y" name="true" sourceRef="Gateway_0j2bkn0" targetRef="Activity_0jtwv4j">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{result == "true" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_1yi862x" name="false" sourceRef="Gateway_0j2bkn0" targetRef="Activity_1dwx139">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{result == "false" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="Activity_1dwx139" name="Go back" scriptFormat="javascript">
+      <bpmn:incoming>Flow_1yi862x</bpmn:incoming>
+      <bpmn:outgoing>Flow_01amhku</bpmn:outgoing>
+      <bpmn:script>execution.setVariable("selectedDoc", doc)</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:sequenceFlow id="Flow_01amhku" sourceRef="Activity_1dwx139" targetRef="Activity_03lmpts" />
+    <bpmn:sequenceFlow id="Flow_1x356vi" sourceRef="ExclusiveGateway_1ha2y2n" targetRef="EndEvent_0v5wp28">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0r4rv3z" sourceRef="Gateway_03dpnr3" targetRef="Event_1nia1gg">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel" }</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_645t9aa8-a0bf-4b58-9eed-eb962dd9dbae">
+      <bpmndi:BPMNEdge id="Flow_0r4rv3z_di" bpmnElement="Flow_0r4rv3z" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="1070" y="285" />
+        <di:waypoint x="1070" y="430" />
+        <di:waypoint x="988" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1x356vi_di" bpmnElement="Flow_1x356vi" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="1410" y="235" />
+        <di:waypoint x="1410" y="60" />
+        <di:waypoint x="3062" y="60" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01amhku_di" bpmnElement="Flow_01amhku">
+        <di:waypoint x="915" y="740" />
+        <di:waypoint x="630" y="740" />
+        <di:waypoint x="630" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1yi862x_di" bpmnElement="Flow_1yi862x">
+        <di:waypoint x="1065" y="665" />
+        <di:waypoint x="1065" y="740" />
+        <di:waypoint x="1015" y="740" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1036" y="720" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0v8oz5y_di" bpmnElement="Flow_0v8oz5y" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1090" y="640" />
+        <di:waypoint x="1125" y="640" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1093" y="621" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gw8y36_di" bpmnElement="Flow_1gw8y36">
+        <di:waypoint x="1810" y="388" />
+        <di:waypoint x="1410" y="388" />
+        <di:waypoint x="1410" y="285" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1hir5o8_di" bpmnElement="Flow_1hir5o8" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2220" y="348" />
+        <di:waypoint x="2220" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0f7n7c4_di" bpmnElement="Flow_0f7n7c4" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="1975" y="388" />
+        <di:waypoint x="1910" y="388" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1939" y="365" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1r04xfi_di" bpmnElement="Flow_1r04xfi" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2025" y="388" />
+        <di:waypoint x="2170" y="388" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2035" y="365" width="41" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1etnygk_di" bpmnElement="Flow_1etnygk" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2000" y="300" />
+        <di:waypoint x="2000" y="363" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0o4pe5p_di" bpmnElement="Flow_0o4pe5p">
+        <di:waypoint x="1910" y="304" />
+        <di:waypoint x="1930" y="304" />
+        <di:waypoint x="1930" y="260" />
+        <di:waypoint x="1950" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_03b212a_di" bpmnElement="Flow_03b212a" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1775" y="260" />
+        <di:waypoint x="1793" y="260" />
+        <di:waypoint x="1793" y="304" />
+        <di:waypoint x="1810" y="304" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1f3bej9_di" bpmnElement="Flow_1f3bej9" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1015" y="640" />
+        <di:waypoint x="1040" y="640" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fzgaru_di" bpmnElement="Flow_1fzgaru" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="800" y="430" />
+        <di:waypoint x="818" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01jrahg_di" bpmnElement="Flow_01jrahg" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1225" y="640" />
+        <di:waypoint x="1246" y="640" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gj10ro_di" bpmnElement="Flow_1gj10ro" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1346" y="640" />
+        <di:waypoint x="1369" y="640" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18e50qi_di" bpmnElement="Flow_18e50qi" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1469" y="640" />
+        <di:waypoint x="1489" y="640" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02k7zwm_di" bpmnElement="Flow_02k7zwm" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="893" y="640" />
+        <di:waypoint x="915" y="640" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_13xyia8_di" bpmnElement="Flow_13xyia8" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2220" y="130" />
+        <di:waypoint x="2250" y="130" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yhuyd3_di" bpmnElement="Flow_0yhuyd3" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2687" y="216" />
+        <di:waypoint x="2719" y="216" />
+        <di:waypoint x="2719" y="260" />
+        <di:waypoint x="2750" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ip6sav_di" bpmnElement="Flow_0ip6sav" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2687" y="304" />
+        <di:waypoint x="2719" y="304" />
+        <di:waypoint x="2719" y="260" />
+        <di:waypoint x="2750" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xxzqme_di" bpmnElement="Flow_0xxzqme" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2533" y="285" />
+        <di:waypoint x="2533" y="304" />
+        <di:waypoint x="2587" y="304" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2547" y="290" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ggumrq_di" bpmnElement="Flow_1ggumrq" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2533" y="235" />
+        <di:waypoint x="2533" y="216" />
+        <di:waypoint x="2587" y="216" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2547" y="201" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1u8lalj_di" bpmnElement="Flow_1u8lalj" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <di:waypoint x="3020" y="285" />
+        <di:waypoint x="3020" y="440" />
+        <di:waypoint x="2800" y="440" />
+        <di:waypoint x="2800" y="400" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2899" y="422" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10v0z0a_di" bpmnElement="Flow_10v0z0a">
+        <di:waypoint x="3020" y="235" />
+        <di:waypoint x="3020" y="160" />
+        <di:waypoint x="2850" y="160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2995" y="166" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1iulqsr_di" bpmnElement="Flow_1iulqsr">
+        <di:waypoint x="2800" y="200" />
+        <di:waypoint x="2800" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ebhuo4_di" bpmnElement="Flow_1ebhuo4">
+        <di:waypoint x="3020" y="285" />
+        <di:waypoint x="3020" y="360" />
+        <di:waypoint x="2970" y="360" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2983" y="343" width="34" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nvep3e_di" bpmnElement="Flow_1nvep3e">
+        <di:waypoint x="2800" y="320" />
+        <di:waypoint x="2800" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_045egj0_di" bpmnElement="Flow_045egj0">
+        <di:waypoint x="2870" y="360" />
+        <di:waypoint x="2850" y="360" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_12s9m20_di" bpmnElement="Flow_12s9m20" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2970" y="260" />
+        <di:waypoint x="2995" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_10jvugq_di" bpmnElement="Flow_10jvugq" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2850" y="260" />
+        <di:waypoint x="2870" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g4qgi4_di" bpmnElement="Flow_1g4qgi4" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2390" y="260" />
+        <di:waypoint x="2410" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01fkpl7_di" bpmnElement="Flow_01fkpl7" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1910" y="216" />
+        <di:waypoint x="1930" y="216" />
+        <di:waypoint x="1930" y="260" />
+        <di:waypoint x="1950" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1nnr8o4_di" bpmnElement="Flow_1nnr8o4" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="868" y="430" />
+        <di:waypoint x="952" y="430" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="920" y="397" width="33" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0gzma09_di" bpmnElement="Flow_0gzma09" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <di:waypoint x="843" y="455" />
+        <di:waypoint x="843" y="500" />
+        <di:waypoint x="290" y="500" />
+        <di:waypoint x="290" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="808" y="483" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sm6o54_di" bpmnElement="Flow_1sm6o54" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1542" y="600" />
+        <di:waypoint x="1542" y="450" />
+        <di:waypoint x="1305" y="450" />
+        <di:waypoint x="1305" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1h9er46_di" bpmnElement="Flow_1h9er46" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="630" y="285" />
+        <di:waypoint x="630" y="390" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="639" y="365" width="69" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0lbd930_di" bpmnElement="Flow_0lbd930" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <di:waypoint x="1070" y="285" />
+        <di:waypoint x="1070" y="500" />
+        <di:waypoint x="290" y="500" />
+        <di:waypoint x="290" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1078" y="288" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1g5sgmn_di" bpmnElement="Flow_1g5sgmn" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1020" y="260" />
+        <di:waypoint x="1045" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ep7swr_di" bpmnElement="Flow_1ep7swr" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="1020" y="161" />
+        <di:waypoint x="290" y="161" />
+        <di:waypoint x="290" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0vdb81s_di" bpmnElement="Flow_0vdb81s" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="1070" y="235" />
+        <di:waypoint x="1070" y="201" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1076" y="215" width="30" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_05zubsh_di" bpmnElement="Flow_05zubsh" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="630" y="285" />
+        <di:waypoint x="630" y="350" />
+        <di:waypoint x="1305" y="350" />
+        <di:waypoint x="1305" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="654" y="333" width="67" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0habdxn_di" bpmnElement="Flow_0habdxn" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1235" y="260" />
+        <di:waypoint x="1255" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0xytxxg_di" bpmnElement="Flow_0xytxxg" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1095" y="260" />
+        <di:waypoint x="1135" y="260" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1093" y="242" width="34" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1alwc95_di" bpmnElement="Flow_1alwc95" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="900" y="260" />
+        <di:waypoint x="920" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pgqitx_di" bpmnElement="Flow_0pgqitx" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="780" y="260" />
+        <di:waypoint x="800" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0q2enjt_di" bpmnElement="Flow_0q2enjt" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <di:waypoint x="480" y="350" />
+        <di:waypoint x="410" y="350" />
+        <di:waypoint x="410" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1pbl9cv_di" bpmnElement="Flow_1pbl9cv" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <di:waypoint x="630" y="285" />
+        <di:waypoint x="630" y="350" />
+        <di:waypoint x="580" y="350" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="593" y="333" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1z07z8d_di" bpmnElement="Flow_1z07z8d" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="843" y="455" />
+        <di:waypoint x="843" y="600" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="848" y="553" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0pyartl_di" bpmnElement="Flow_0pyartl" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="680" y="430" />
+        <di:waypoint x="700" y="430" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rg1p71_di" bpmnElement="Flow_0rg1p71" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="580" y="260" />
+        <di:waypoint x="605" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0eybjop_di" bpmnElement="Flow_0eybjop" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="460" y="260" />
+        <di:waypoint x="480" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1lq86kl_di" bpmnElement="Flow_1lq86kl" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="340" y="260" />
+        <di:waypoint x="360" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0onhqrk_di" bpmnElement="SequenceFlow_0onhqrk" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="2435" y="235" />
+        <di:waypoint x="2435" y="60" />
+        <di:waypoint x="3062" y="60" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0lmsbvp_di" bpmnElement="SequenceFlow_0lmsbvp" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2460" y="260" />
+        <di:waypoint x="2508" y="260" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2457" y="242" width="46" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_11wpvkx_di" bpmnElement="SequenceFlow_11wpvkx" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="2270" y="260" />
+        <di:waypoint x="2290" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0yvgszu_di" bpmnElement="SequenceFlow_0yvgszu" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1564" y="216" />
+        <di:waypoint x="1584" y="216" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1mtvd6q_di" bpmnElement="SequenceFlow_1mtvd6q" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1564" y="306" />
+        <di:waypoint x="1574" y="306" />
+        <di:waypoint x="1574" y="305" />
+        <di:waypoint x="1584" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1amgj8j_di" bpmnElement="SequenceFlow_1amgj8j" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1410" y="285" />
+        <di:waypoint x="1410" y="306" />
+        <di:waypoint x="1464" y="306" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1424" y="292" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_079toej_di" bpmnElement="SequenceFlow_079toej" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1410" y="235" />
+        <di:waypoint x="1410" y="216" />
+        <di:waypoint x="1464" y="216" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1424" y="201" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0wrfepu_di" bpmnElement="SequenceFlow_0wrfepu" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1355" y="260" />
+        <di:waypoint x="1385" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1qf6zjh_di" bpmnElement="SequenceFlow_1qf6zjh" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1684" y="305" />
+        <di:waypoint x="1705" y="305" />
+        <di:waypoint x="1705" y="260" />
+        <di:waypoint x="1725" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_109cix0_di" bpmnElement="SequenceFlow_109cix0" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="3045" y="260" />
+        <di:waypoint x="3080" y="260" />
+        <di:waypoint x="3080" y="78" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3023" y="79" width="33" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1t3ywz8_di" bpmnElement="SequenceFlow_1t3ywz8" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="1750" y="235" />
+        <di:waypoint x="1750" y="60" />
+        <di:waypoint x="3062" y="60" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2057" y="68" width="33" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0xtg4bg_di" bpmnElement="SequenceFlow_0xtg4bg" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="630" y="235" />
+        <di:waypoint x="630" y="60" />
+        <di:waypoint x="3062" y="60" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="664" y="77" width="33" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qs2e6x_di" bpmnElement="SequenceFlow_0qs2e6x" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <di:waypoint x="1750" y="285" />
+        <di:waypoint x="1750" y="500" />
+        <di:waypoint x="290" y="500" />
+        <di:waypoint x="290" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1708" y="476" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0pe3csp_di" bpmnElement="SequenceFlow_0pe3csp" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
+        <di:waypoint x="3045" y="260" />
+        <di:waypoint x="3080" y="260" />
+        <di:waypoint x="3080" y="500" />
+        <di:waypoint x="290" y="500" />
+        <di:waypoint x="290" y="300" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3027" y="476" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1drgbt4_di" bpmnElement="SequenceFlow_1drgbt4" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="193" y="260" />
+        <di:waypoint x="240" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_080dahq_di" bpmnElement="SequenceFlow_080dahq" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1775" y="260" />
+        <di:waypoint x="1793" y="260" />
+        <di:waypoint x="1793" y="216" />
+        <di:waypoint x="1810" y="216" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1764" y="201" width="31" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1rtwkuq_di" bpmnElement="SequenceFlow_1rtwkuq" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="1684" y="216" />
+        <di:waypoint x="1705" y="216" />
+        <di:waypoint x="1705" y="260" />
+        <di:waypoint x="1725" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0fxlw4g_di" bpmnElement="SequenceFlow_0fxlw4g" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
+        <di:waypoint x="655" y="260" />
+        <di:waypoint x="680" y="260" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="655" y="242" width="19" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="157" y="242" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_16o215j_di" bpmnElement="ExclusiveGateway_16o215j" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="605" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1v3dgqi_di" bpmnElement="ExclusiveGateway_1v3dgqi" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="1725" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1ccr52r_di" bpmnElement="ServiceTask_1ccr52r">
+        <dc:Bounds x="2250" y="90" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0v5wp28_di" bpmnElement="EndEvent_0v5wp28">
+        <dc:Bounds x="3062" y="42" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_1v2m0ia_di" bpmnElement="ServiceTask_1v2m0ia">
+        <dc:Bounds x="1255" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1ha2y2n_di" bpmnElement="ExclusiveGateway_1ha2y2n" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="1385" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1i5d5cw_di" bpmnElement="ScriptTask_1i5d5cw">
+        <dc:Bounds x="1464" y="266" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1sqh8gw_di" bpmnElement="ScriptTask_1sqh8gw">
+        <dc:Bounds x="1464" y="176" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1t605j4_di" bpmnElement="ScriptTask_1t605j4">
+        <dc:Bounds x="2170" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0oelk0c_di" bpmnElement="ExclusiveGateway_0oelk0c" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="2410" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1i2kem3_di" bpmnElement="Activity_1i2kem3">
+        <dc:Bounds x="240" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0q9xb3u_di" bpmnElement="Activity_0q9xb3u">
+        <dc:Bounds x="680" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0kbcfyq_di" bpmnElement="Activity_0kbcfyq">
+        <dc:Bounds x="360" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0f7fwu3_di" bpmnElement="Activity_0f7fwu3">
+        <dc:Bounds x="480" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03lmpts_di" bpmnElement="Activity_03lmpts">
+        <dc:Bounds x="580" y="390" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0kp5rqf_di" bpmnElement="Gateway_0kp5rqf" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="818" y="405" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0o2mbuk_di" bpmnElement="Activity_0o2mbuk">
+        <dc:Bounds x="480" y="310" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0e0gxys_di" bpmnElement="Activity_0e0gxys">
+        <dc:Bounds x="1135" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0pnpa1p_di" bpmnElement="Activity_0pnpa1p">
+        <dc:Bounds x="800" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_03dpnr3_di" bpmnElement="Gateway_03dpnr3" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="1045" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_03z7mxe_di" bpmnElement="Activity_03z7mxe">
+        <dc:Bounds x="1020" y="121" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_038d8vv_di" bpmnElement="Activity_038d8vv">
+        <dc:Bounds x="1584" y="265" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1rsf9ij_di" bpmnElement="Activity_1rsf9ij">
+        <dc:Bounds x="1584" y="176" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1nia1gg_di" bpmnElement="Event_1nia1gg">
+        <dc:Bounds x="952" y="412" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qkmtdu_di" bpmnElement="Activity_0qkmtdu">
+        <dc:Bounds x="1810" y="176" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0qwmo1t_di" bpmnElement="Activity_0qwmo1t">
+        <dc:Bounds x="2290" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1aa1b8n_di" bpmnElement="Activity_1aa1b8n">
+        <dc:Bounds x="2750" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1hyyf75_di" bpmnElement="Gateway_1hyyf75" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="2995" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_196o3j9_di" bpmnElement="Activity_196o3j9">
+        <dc:Bounds x="2870" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1vmjski_di" bpmnElement="Activity_1vmjski">
+        <dc:Bounds x="2750" y="320" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1izn50y_di" bpmnElement="Activity_1izn50y">
+        <dc:Bounds x="2870" y="320" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wtw1jt_di" bpmnElement="Activity_0wtw1jt">
+        <dc:Bounds x="2750" y="120" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_02j1gc9_di" bpmnElement="Gateway_02j1gc9" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="2508" y="235" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1csvyzf_di" bpmnElement="Activity_1csvyzf">
+        <dc:Bounds x="2587" y="176" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_01wsdxd_di" bpmnElement="Activity_01wsdxd">
+        <dc:Bounds x="2587" y="264" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1yrw7i0_di" bpmnElement="Activity_1yrw7i0">
+        <dc:Bounds x="2120" y="90" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_042xwva_di" bpmnElement="Activity_042xwva">
+        <dc:Bounds x="793" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1251abc_di" bpmnElement="Activity_1251abc">
+        <dc:Bounds x="1489" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_162tmm5_di" bpmnElement="Activity_162tmm5">
+        <dc:Bounds x="1369" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jtwv4j_di" bpmnElement="Activity_0jtwv4j">
+        <dc:Bounds x="1125" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0dd764b_di" bpmnElement="Activity_0dd764b">
+        <dc:Bounds x="1246" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0f52gw8_di" bpmnElement="Activity_0f52gw8">
+        <dc:Bounds x="700" y="390" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1u6o7lc_di" bpmnElement="Activity_1u6o7lc">
+        <dc:Bounds x="920" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1l8z6d1_di" bpmnElement="Activity_1l8z6d1">
+        <dc:Bounds x="915" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_19c5zp8_di" bpmnElement="Activity_19c5zp8">
+        <dc:Bounds x="1125" y="730" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_071o0dx_di" bpmnElement="Activity_071o0dx">
+        <dc:Bounds x="1810" y="264" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ajpy1l_di" bpmnElement="Activity_0ajpy1l">
+        <dc:Bounds x="2170" y="348" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0e0fwk7_di" bpmnElement="Activity_0e0fwk7">
+        <dc:Bounds x="1950" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0gq75e0_di" bpmnElement="Gateway_0gq75e0" isMarkerVisible="true">
+        <dc:Bounds x="1975" y="363" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1sha477_di" bpmnElement="Activity_1sha477">
+        <dc:Bounds x="1810" y="348" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0j2bkn0_di" bpmnElement="Gateway_0j2bkn0" isMarkerVisible="true">
+        <dc:Bounds x="1040" y="615" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1dwx139_di" bpmnElement="Activity_1dwx139">
+        <dc:Bounds x="915" y="700" width="100" height="80" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

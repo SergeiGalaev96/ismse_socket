@@ -1,0 +1,116 @@
+{
+  "formName": "memoForm",
+  "label": "Форма памятки",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "Doctors",
+      "label": "Список врачей необходимых к проведению обследования",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "Doctor1",
+          "label": "Врач 1",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor2",
+          "label": "Врач 2",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor3",
+          "label": "Врач 3",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor4",
+          "label": "Врач 4",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor5",
+          "label": "Врач 5",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor6",
+          "label": "Врач 6",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor7",
+          "label": "Врач 7",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Doctor8",
+          "label": "Врач 8",
+          "enumDef": "01C53532-5612-4829-A90B-5DA41EF3837B",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "DoctorAhotner",
+          "label": "Другое",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Div",
+          "name": "",
+          "label": "",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "Div",
+          "name": "",
+          "label": "",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

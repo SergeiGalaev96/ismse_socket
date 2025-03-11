@@ -1,0 +1,53 @@
+{
+  "formName": "complaintsSearchForm",
+  "docDefId": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+  "label": "Форма поиска жалоб",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "Complaint",
+      "label": "Жалоба",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "DateOfComplaint",
+          "label": "Дата",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "status",
+          "label": "Статус",
+          "enumDef": "4CF41E0E-D3EB-410A-85C0-D25D0BC75BEB",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "situationType",
+          "label": "Тип ситуации",
+          "enumDef": "235707E5-6779-4685-B62B-2B9D512FFCDD",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

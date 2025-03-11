@@ -1,0 +1,55 @@
+{
+  "rolesConfig": {
+    "Администратор": "Administrator",
+    "Председатель": "Superviser",
+    "Оператор": "Operator",
+    "Хирург": "Doctor",
+    "Терапевт": "Doctor",
+    "Невролог/Психиатор": "Doctor",
+    "Окулист": "Doctor",
+    "Кардиолог": "Doctor",
+    "Педиатр": "Doctor",
+    "Офтальмолог": "Doctor",
+    "Доктора других специальностей": "Doctor",
+    "Центральный аппарат": "Doctor",
+    "Регистратор": "Registrator"
+  },
+  "adultsMedaktFormsConfig": {
+    "Администратор": "adultsDetailedForm",
+    "Председатель": "adultsDetailedForm",
+    "Оператор": "adultsDetailedForm",
+    "Хирург": "adultsDetailedFormSurgeon",
+    "Терапевт": "adultsDetailedFormTherapist",
+    "Офтальмолог": "adultsDetailedFormOphtalmologist",
+    "Невролог/Психиатор": "adultsDetailedFormNeurologistPsychiatrist",
+    "Окулист": "adultsDetailedFormOculist",
+    "Кардиолог": "adultsDetailedFormCardiologist",
+    "Педиатр": "adultsDetailedFormPediatritian",
+    "Доктора других специальностей": "adultsDetailedFormDoctorAnother",
+    "Центральный аппарат": "adultsDetailedForm",
+    "Регистратор": "adultsDetailedFormDoctorAnother"
+  },
+  "childMedaktFormsConfig": {
+    "Администратор": "childDetailedForm",
+    "Председатель": "childDetailedForm",
+    "Оператор": "childDetailedForm",
+    "Хирург": "childDetailedFormSurgeon",
+    "Терапевт": "childDetailedFormTherapist",
+    "Офтальмолог": "childDetailedFormOphtalmologist",
+    "Невролог/Психиатор": "childDetailedFormNeurologistPsychiatrist",
+    "Окулист": "childDetailedFormOculist",
+    "Кардиолог": "childDetailedFormCardiologist",
+    "Педиатр": "childDetailedFormPediatritian",
+    "Доктора других специальностей": "childDetailedFormDoctorAnother",
+    "Центральный аппарат": "childDetailedForm",
+    "Регистратор": "childDetailedFormDoctorAnother"
+  },
+  "enumConfig": {
+    "cbd4b1f8-c225-48d6-997c-f2116f2d5122": {
+      "api": "/StaticReferences/GetExportGrownStatuses"
+    },
+    "b8cccc9b-ef59-4f92-a699-a1586ec089b4": {
+      "api": "/StaticReferences/GetExportChildStatuses"
+    }
+  }
+}

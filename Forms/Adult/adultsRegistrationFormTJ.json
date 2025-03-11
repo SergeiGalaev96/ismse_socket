@@ -1,0 +1,528 @@
+{
+  "formType": "edit",
+  "formName": "AdultsRegistrationForm",
+  "docDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "label": "Форма регистрации взрослый",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "registrationSection",
+      "label": "Регистрация",
+      "required": false,
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "MseName",
+          "label": "Наименование МСЭ",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "No",
+          "label": "№ регистрации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "Date",
+          "label": "Дата регистрации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "required": false,
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "required": false,
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресные данные заявителя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "presence",
+      "label": "Наличие:",
+      "required": false,
+      "contents": [
+        {
+          "type": "Text",
+          "name": "RegNoAct",
+          "label": "№ акта по МСЭК",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Text",
+          "name": "MedicalOrgName",
+          "label": "Наименование лечебной организации направившей на МСЭ",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "MedicalOrgAddress",
+          "label": "Адрес направившей лечебной организации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "EducationAct",
+          "label": "Образование",
+          "enumDef": "0978f0f1-ea18-48fd-9b15-0b1e178d6188",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Enum",
+          "name": "Occupation",
+          "label": "Род деятельности",
+          "enumDef": "8553824E-35AE-4DB9-9807-EC3E0D47CC38",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Enum",
+          "name": "ExaminationPrRe",
+          "label": "Тип освидетельствования",
+          "enumDef": "05B5C131-A1A7-46C1-9C28-FFE744136FE3",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Enum",
+          "name": "ExaminationPlace",
+          "label": "Место освидетельствования",
+          "enumDef": "3e41f23d-9ddb-410e-8bc7-1ce89d24c3e6",
+          "edit": true,
+          "required": true
+        },
+        { 
+          "type": "Enum", 
+          "name": "ConsMarriage",  
+          "label": "Имеющие кровнородственный брак родителей-инвалидов",
+          "enumDef": "6D0466D2-3CB5-4576-9F89-55FD8D7EDEA4",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "goalSurvey",
+      "label": "Цель освидетельствования",
+      "required": true,
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "goal1",
+          "label": "Для установления группы инвалидности",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "goal2",
+          "label": "Изменение причины инвалидности",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "goal3",
+          "label": "Определение степени утраты трудоспособности в %",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "goal4",
+          "label": "Дом интернат:",
+          "enumDef": "A538AE76-B6F4-41E1-833F-91BE67D57536",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "BoardingHouse",
+          "label": "Дом интернат",
+          "enumDef": "FCC99D84-4C51-49BD-A0A1-70DC5CDA6C09",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "RehabilitationMeans",
+          "label": "Технические средства реабилитации",
+          "enumDef": "E6CA5AF3-480B-47AF-BD08-B6FDC07DAE59",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "ByWorse",
+          "label": "По ухудшению",
+          "enumDef": "5CAB02AC-B996-412C-B663-30ADA619B275",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "ByBetter",
+          "label": "По улучшению",
+          "enumDef": "65152E64-EFDC-45AC-9D38-1F22F1E356D7",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "additionalnformation",
+      "label": "Дополнительные данные",
+      "required": false,
+      "contents": [
+        {
+          "type": "Text",
+          "name": "PlaceOfWork",
+          "label": "Место работы (наименование, адрес орг-и)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "Position",
+          "label": "Должность",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Currency",
+          "name": "Wage",
+          "label": "Среднемесячный заработок в последний год",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "PensionStatus",
+          "label": "Получает пенсию",
+          "enumDef": "E8FA4490-92C5-4DF8-82A7-3741D1FDA2EB",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Currency",
+          "name": "PensionAmount",
+          "label": "Размер пенсии (сомони/дирам)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "TimeWork",
+          "label": "Где и с какого времени работает",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "Profession",
+          "label": "Основная профессия (уточняется врачом экспертом)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Float",
+          "name": "Height",
+          "label": "Рост",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Float",
+          "name": "Weight",
+          "label": "Вес",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "MilitaryIndustry",
+          "label": "Наименование правоохранительных органов и силовых структур",
+          "enumDef": "485900D9-38F0-434C-AA2D-EBED048E27E9",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "houseConditions",
+      "label": "Жилищно-бытовые условия",
+      "required": false,
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "Good",
+          "label": "хорошие",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "Satisfactory",
+          "label": "удовлетворительные",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "Unsatisfactory",
+          "label": "неудовлетворительные",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SeparateApartment",
+          "label": "отдельная квартира",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "OwnHouse",
+          "label": "собственный дом",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "Dormitory",
+          "label": "общежитие",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "LivingAreaRemovable",
+          "label": "жилая площадь съемная",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "NoOwnAccommodation",
+          "label": "нет собственного жилья",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "Additionally",
+          "label": "другое",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "WorkingConditions",
+      "label": "Характер и условия труда",
+      "required": false,
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "WorkingConditions1",
+          "label": "Нервно-психическое напряжение",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "WorkingConditions2",
+          "label": "Предписанный темп работы",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "WorkingConditions3",
+          "label": "Рабочая поза",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "WorkingConditions4",
+          "label": "Сложность, напряженность",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "WorkingConditions5",
+          "label": "Физический труд",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "WorkingConditions6",
+          "label": "Умственный труд",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "WorkingConditions7",
+          "label": "Надомный труд",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "HowToDoJob",
+      "label": "Как справляется работой",
+      "required": false,
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "Easily",
+          "label": "Легко",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "Difficulties",
+          "label": "С трудом",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "CantManage",
+          "label": "Не справляется",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "FullTimeWork",
+          "label": "Полный рабочий день",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "PartTime",
+          "label": "Неполным рабочим днем",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "AnIncomWorkWeek",
+          "label": "Неполной рабочей неделей",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "AdditionalInterruptions",
+          "label": "Дополнительными перерывами",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "ExamDates",
+      "label": "Даты освидетельствования",
+      "required": false,
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "ExamStartDate",
+          "label": "Дата начала экспертизы",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        }
+      ]
+    }
+  ]
+}

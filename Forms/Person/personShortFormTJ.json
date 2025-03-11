@@ -1,0 +1,56 @@
+{
+  "formName": "documentViewForm",
+  "formtype": "edit",
+  "id": null,
+  "docDefId": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+  "attributes": [
+    {
+      "type": "Text",
+      "name": "IIN",
+      "caption": "ПИН",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "Last_Name",
+      "caption": "Фамилия",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "First_Name",
+      "caption": "Имя",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "Middle_Name",
+      "caption": "Отчество",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "DateTime",
+      "name": "Date_of_Birth",
+      "caption": "Дата рождения",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Enum",
+      "name": "Sex",
+      "caption": "Пол",
+      "enumDef": "c780ce23-ac09-4cc3-8147-7779f6d80b65",
+      "edit": true,
+      "required": false
+    }
+  ]
+}

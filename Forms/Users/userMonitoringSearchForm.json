@@ -1,0 +1,38 @@
+{
+  "formName": "userMonitoringSearchForm",
+  "docDefId": "",
+  "label": "Форма выбора периода мониторинга",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "UserData",
+      "label": "Данные",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "from",
+          "label": "С",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "DateTime",
+          "name": "to",
+          "label": "По",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Enum",
+          "name": "organizationId",
+          "label": "Наименование МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

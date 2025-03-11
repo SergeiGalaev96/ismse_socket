@@ -1,0 +1,78 @@
+{
+  "formName": "userGridForm",
+  "docDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "label": "Форма поиска/создания новых пользователей",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "UserData",
+      "label": "Данные",
+      "contents": [
+        {
+          "type": "Text",
+          "name": "username",
+          "label": "Логин",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "userRole",
+          "label": "Роль",
+          "enumDef": "EEDA55F0-35AC-4424-8E48-20C4963F3BC7",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "organizationId",
+          "label": "Наименование МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "firstName",
+          "label": "Фамилия",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "lastName",
+          "label": "Имя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "email",
+          "label": "Email",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "address",
+          "label": "Адрес",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "phone",
+          "label": "Телефон",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

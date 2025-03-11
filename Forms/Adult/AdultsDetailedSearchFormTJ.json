@@ -1,0 +1,115 @@
+{
+  "formName": "AdultsDetailedSearchForm",
+  "docDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "label": "Форма поиска медицинских актов(вз)",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "detailedFormSection",
+      "label": "Медицинский акт",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "MseName",
+          "label": "Наименование МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "RegNoAct",
+          "label": "№ акта по МСЭК",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Text",
+          "name": "No",
+          "label": "Номер Регистрации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "ExamDateFrom",
+          "label": "Инвалидность установлена с",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "ExamDateTo",
+          "label": "Инвалидность установлена по",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "Date",
+          "label": "Дата регистрации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "stateSection",
+      "label": "Дата изменения статуса",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "StatusDateFrom",
+          "label": "С",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "StatusDateTo",
+          "label": "По",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресc",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

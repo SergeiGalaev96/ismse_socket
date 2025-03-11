@@ -1,0 +1,4466 @@
+{
+  "Administrator": {
+    "PersonSearchDocumentGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonTransferDocumentGridFormButtons": [
+      {
+        "name": "selectDocumentToTransfer",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "PersonTransferDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "TransferDocumentButtons": [
+      {
+        "name": "transferDocuments",
+        "label": "Перевод",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonCreateDocumentButtons": [
+      {
+        "name": "saveDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonViewEditDocumentButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonReexaminationButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "MemoButtons": [
+      {
+        "name": "downloadMemo",
+        "label": "Скачать памятку",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "viewRegForm",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    
+    "PersonSearchDocumentButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "createDocument",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "StateSelectingButtons": [
+      {
+        "name": "setNewState",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ChildStateSelectingButtons": [
+      {
+        "name": "setNewStateChild",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentToTransfer": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateRegFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegFormButtonsDoctor": [
+      {
+        "name": "medakt",
+        "label": "Мед. акт",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UpdateRegFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ReexaminationDetailedFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewGeneralDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedSignedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "reexamination",
+        "label": "Переосвидетельствование",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedDiedFormButtons": [
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedIPRFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSearchFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedIPRGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedTrashGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "EditDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateIPRFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "backToMedakt",
+        "label": "Подтвердить",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRSearchFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "EditIPRFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "IPRSearchFormButtons": [
+      {
+        "name": "findIPR",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "IPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteIPR",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRsignedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSignedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedDiedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "SearchUserButtons": [
+      {
+        "name": "findUser",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "createUser",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateUserButtons": [
+      {
+        "name": "saveUser",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "EditUserButtons": [
+      {
+        "name": "updateUser",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "resetPassword",
+        "label": "Сбросить пароль",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteUser",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UserGridFormButtons": [
+      {
+        "name": "editUser",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonSearchComplaintsAppealsButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "CreateComplaintsAppealsFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Завершить",
+        "backgroundColor": "#4EB5FA"
+      }
+    ],
+    "UpdateComplaintsAppealsFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "acceptComplaint",
+        "label": "Принять",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "rejectComplaint",
+        "label": "Отклонить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsStateFormButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DownloadMedaktButtons": [
+      {
+        "name": "downloadMedakt",
+        "label": "Скачать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ]
+  },
+  "Doctor": {
+    "PersonSearchDocumentGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonCreateDocumentButtons": [
+      {
+        "name": "saveDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonViewEditDocumentButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonReexaminationButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "createDocument",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "StateSelectingButtons": [
+      {
+        "name": "setNewState",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ChildStateSelectingButtons": [
+      {
+        "name": "setNewStateChild",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "MemoButtons": [
+      {
+        "name": "downloadMemo",
+        "label": "Скачать памятку",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "viewRegForm",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "SearchRegFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "CreateRegFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegFormButtonsDoctor": [
+      {
+        "name": "medakt",
+        "label": "Мед. акт",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UpdateRegFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ReexaminationDetailedFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewGeneralDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedSignedFormButtons": [
+      {
+        "name": "reexamination",
+        "label": "Переосвидетельствование",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedDiedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedIPRFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSearchFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedIPRGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedTrashGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "EditDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateIPRFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "backToMedakt",
+        "label": "Подтвердить",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRSearchFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "EditIPRFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "IPRSearchFormButtons": [
+      {
+        "name": "findIPR",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "IPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteIPR",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRsignedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSignedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedDiedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonSearchComplaintsAppealsButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "CreateComplaintsAppealsFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Завершить",
+        "backgroundColor": "#4EB5FA"
+      }
+    ],
+    "UpdateComplaintsAppealsFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "acceptComplaint",
+        "label": "Принять",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "rejectComplaint",
+        "label": "Отклонить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsStateFormButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ]
+  },
+  "Operator": {
+    "PersonSearchDocumentGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonCreateDocumentButtons": [
+      {
+        "name": "saveDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonViewEditDocumentButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonReexaminationButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "createDocument",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "StateSelectingButtons": [
+      {
+        "name": "setNewState",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ChildStateSelectingButtons": [
+      {
+        "name": "setNewStateChild",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentToTransfer": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonTransferDocumentGridFormButtons": [
+      {
+        "name": "selectDocumentToTransfer",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "PersonTransferDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "TransferDocumentButtons": [
+      {
+        "name": "transferDocuments",
+        "label": "Перевод",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "MemoButtons": [
+      {
+        "name": "downloadMemo",
+        "label": "Скачать памятку",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "viewRegForm",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "SearchRegFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "CreateRegFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegFormButtonsDoctor": [
+      {
+        "name": "medakt",
+        "label": "Мед. акт",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UpdateRegFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ReexaminationDetailedFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewGeneralDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedSignedFormButtons": [
+      {
+        "name": "reexamination",
+        "label": "Переосвидетельствование",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedDiedFormButtons": [
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedIPRFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSearchFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedIPRGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedTrashGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "EditDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateIPRFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "backToMedakt",
+        "label": "Подтвердить",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRSearchFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "EditIPRFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "IPRSearchFormButtons": [
+      {
+        "name": "findIPR",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "IPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteIPR",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRsignedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSignedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteIPR",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedDiedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonSearchComplaintsAppealsButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "CreateComplaintsAppealsFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Завершить",
+        "backgroundColor": "#4EB5FA"
+      }
+    ],
+    "UpdateComplaintsAppealsFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "acceptComplaint",
+        "label": "Принять",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "rejectComplaint",
+        "label": "Отклонить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsStateFormButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ]
+  },
+  "Superviser": {
+    "PersonSearchDocumentGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonTransferDocumentGridFormButtons": [
+      {
+        "name": "selectDocumentToTransfer",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "PersonCreateDocumentButtons": [
+      {
+        "name": "saveDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonViewEditDocumentButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonReexaminationButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "MemoButtons": [
+      {
+        "name": "downloadMemo",
+        "label": "Скачать памятку",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "viewRegForm",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonTransferDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "TransferDocumentButtons": [
+      {
+        "name": "transferDocuments",
+        "label": "Перевод",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "createDocument",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "StateSelectingButtons": [
+      {
+        "name": "setNewState",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ChildStateSelectingButtons": [
+      {
+        "name": "setNewStateChild",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentToTransfer": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "CreateRegFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegFormButtonsDoctor": [
+      {
+        "name": "medakt",
+        "label": "Мед. акт",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UpdateRegFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ReexaminationDetailedFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewGeneralDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedSignedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "reexamination",
+        "label": "Переосвидетельствование",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "showStatusSelectingForm",
+        "label": "Изменить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedDiedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchDetailedFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedIPRFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSearchFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedIPRGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedTrashGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "EditDetailedFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateIPRFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "backToMedakt",
+        "label": "Подтвердить",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRSearchFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "EditIPRFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "IPRSearchFormButtons": [
+      {
+        "name": "findIPR",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "IPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteIPR",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRsignedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSignedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedDiedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonSearchComplaintsAppealsButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "CreateComplaintsAppealsFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Завершить",
+        "backgroundColor": "#4EB5FA"
+      }
+    ],
+    "UpdateComplaintsAppealsFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "acceptComplaint",
+        "label": "Принять",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "rejectComplaint",
+        "label": "Отклонить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsStateFormButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ]
+  },
+  "Registrator": {
+    "PersonSearchDocumentButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "createDocument",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonCreateDocumentButtons": [
+      {
+        "name": "saveDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonViewEditDocumentButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonReexaminationButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "StateSelectingButtons": [
+      {
+        "name": "setNewState",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ChildStateSelectingButtons": [
+      {
+        "name": "setNewStateChild",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "MemoButtons": [
+      {
+        "name": "downloadMemo",
+        "label": "Скачать памятку",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "viewRegForm",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "SearchRegFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "deleteDocument",
+        "label": "Удалить",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateRegFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegFormButtonsDoctor": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UpdateRegFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedTrashGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedSearchFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtonsSuperviser": [
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtonsSuperviser": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "IPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "backToMedakt",
+        "label": "Подтвердить",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedIPRFormButtonsSuperviser": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewGeneralDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "CreateComplaintsAppealsFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Завершить",
+        "backgroundColor": "#4EB5FA"
+      }
+    ],
+    "UpdateComplaintsAppealsFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "acceptComplaint",
+        "label": "Принять",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "rejectComplaint",
+        "label": "Отклонить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsStateFormButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ]
+  },
+  "Center": {
+    "PersonSearchDocumentGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonTransferDocumentGridFormButtons": [
+      {
+        "name": "selectDocumentToTransfer",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "PersonCreateDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonViewEditDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonReexaminationButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "close",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "MemoButtons": [
+      {
+        "name": "downloadMemo",
+        "label": "Скачать памятку",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "viewRegForm",
+        "label": "Далее",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonTransferDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "TransferDocumentButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "createDocument",
+        "label": "Создать",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "StateSelectingButtons": [
+      {
+        "name": "setNewState",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ChildStateSelectingButtons": [
+      {
+        "name": "setNewStateChild",
+        "label": "Установить статус",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchDocumentToTransfer": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchRegGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "CreateRegFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegFormButtons": [
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegFormButtonsDoctor": [
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "medakt",
+        "label": "Мед. акт",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "UpdateRegFormButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateDetailedFormButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ReexaminationDetailedFormButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtons": [
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "registerDocument",
+        "label": "Зарегистрировать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewGeneralDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedSignedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedDiedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedFormButtonsSuperviser": [
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "attachDocument",
+        "label": "Скан",
+        "backgroundColor": "#78F5FB"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchDetailedFormButtons": [
+      {
+        "name": "ipr",
+        "label": "ИПР",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewChildDetailedFormButtonsSuperviser": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewDetailedIPRFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewDetailedIPRFormButtonsSuperviser": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "signDocument",
+        "label": "Подписать",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSearchFormButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedIPRGridFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedTrashGridFormButtons": [
+      {
+        "name": "openMedakt",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "EditDetailedFormButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "CreateIPRFormButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewIPRFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "backToMedakt",
+        "label": "Подтвердить",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRSearchFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "EditIPRFormButtons": [
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "IPRSearchFormButtons": [
+      {
+        "name": "findIPR",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "IPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewIPRsignedFormButtons": [
+      {
+        "name": "downloadExcel",
+        "label": "В Excel",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "downloadPDF",
+        "label": "В PDF",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "DetailedSignedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "DetailedDiedIPRGridFormButtons": [
+      {
+        "name": "editIPR",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "PersonSearchComplaintsAppealsButtons": [
+      {
+        "name": "findDocument",
+        "label": "Найти",
+        "backgroundColor": "#D3D3FE"
+      },
+      {
+        "name": "cancel",
+        "label": "Закрыть",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "PersonSearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Выбрать",
+        "backgroundColor": "#D3D3FE"
+      }
+    ],
+    "CreateComplaintsAppealsFormButtons": [
+      {
+        "name": "createDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "finish",
+        "label": "Завершить",
+        "backgroundColor": "#4EB5FA"
+      }
+    ],
+    "UpdateComplaintsAppealsFormButtons": [
+      {
+        "name": "updateDocument",
+        "label": "Сохранить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "back",
+        "label": "Отмена",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "SearchComplaintsAppealsGridFormButtons": [
+      {
+        "name": "selectDocument",
+        "label": "Открыть",
+        "backgroundColor": "#D1FBD1"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsFormButtons": [
+      {
+        "name": "editDocument",
+        "label": "Изменить",
+        "backgroundColor": "#D1FBD1"
+      },
+      {
+        "name": "acceptComplaint",
+        "label": "Принять",
+        "backgroundColor": "#4EB5FA"
+      },
+      {
+        "name": "rejectComplaint",
+        "label": "Отклонить",
+        "backgroundColor": "#FBDCDE"
+      },
+      {
+        "name": "finish",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ],
+    "ViewRegisteredComplaintsAppealsStateFormButtons": [
+      {
+        "name": "back",
+        "label": "Назад",
+        "backgroundColor": "#FBDCDE"
+      }
+    ]
+  }
+}

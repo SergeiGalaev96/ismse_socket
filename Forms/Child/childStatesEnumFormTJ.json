@@ -1,0 +1,38 @@
+{
+  "formName": "ChildMedicalCertificateStatesForm",
+  "docDefId": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+  "label": "Форма статуса инвалида (дт)",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "statesFormSection",
+      "label": "Форма статуса инвалида (дт)",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "StatesName",
+          "label": "Статус",
+          "enumDef": "DC8F4816-8363-4C94-9EAD-6E5A3F0BD603",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "statusDate",
+          "label": "Дата статуса",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Text",
+          "name": "userName",
+          "label": "Пользователь",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "formName": "documentViewForm",
+  "docDefId": "6052978A-1ECB-4F96-A16B-93548936AFC0",
+  "adultsMedaktDocDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "childMedaktDocDefId": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+  "attributes": [
+    {
+      "type": "Text",
+      "name": "NationalID",
+      "caption": "Националный №",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "maxLength": "14",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "INN",
+      "caption": "ИНН",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "SIN",
+      "caption": "СИН",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "IIN",
+      "caption": "ПИН",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "maxLength": "14",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "Last_Name",
+      "caption": "Фамилия",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "First_Name",
+      "caption": "Имя",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "Middle_Name",
+      "caption": "Отчество",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "DateTime",
+      "name": "Date_of_Birth",
+      "caption": "Дата рождения",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Enum",
+      "name": "Sex",
+      "caption": "Пол",
+      "enumDef": "c780ce23-ac09-4cc3-8147-7779f6d80b65",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Enum",
+      "name": "FamilyState",
+      "caption": "Семейное положение",
+      "enumDef": "6e4930ea-895f-4709-9511-f415fff4c506",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Enum",
+      "name": "PassportType",
+      "caption": "Типы удостоверяющих документов",
+      "enumDef": "639c4a54-cdc2-4752-b9bc-210a775a4613",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "PassportSeries",
+      "caption": "Серия",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "PassportNo",
+      "caption": "Номер",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "Text",
+      "name": "Issuing_Authority",
+      "caption": "Выдавший орган",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    },
+    {
+      "type": "DateTime",
+      "name": "Date_of_Issue",
+      "caption": "Дата выдачи",
+      "enumDef": "00000000-0000-0000-0000-000000000000",
+      "edit": true,
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "formName": "ChildIPRForm",
+  "docDefId": "38CBA2D5-9783-4B85-9D8E-40A5384765CB",
+  "medicalCardDocDefId": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+  "label": "Индивидуальная программа реабилитации(дт)",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "IPRSection",
+      "label": "Индивидуальная программа реабилитации(дт)",
+      "contents": [
+        {
+          "type": "Text",
+          "name": "IPRNo",
+          "label": "№ ИПР",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "DisabilityGroup",
+          "label": "Группа инвалидности",
+          "enumDef": "98BBCE46-2370-4C57-AFCE-9AB21D24EEF4",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "DisabilityReason",
+          "label": "Причина инвалидности",
+          "enumDef": "033E7872-A466-404A-AD69-000872C10369",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "ClinicalMedicalExam",
+          "label": "Клинический медицинский осмотр",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресные данные заявителя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "MedicalRehabilitation",
+      "label": "Медицинская реабилитация",
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "RehabTherapyMed",
+          "label": "Восстановительная терапия",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "ReconstructiveurgeryMed",
+          "label": "Реконструктивная хирургия",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SpaResortTreatmentMed",
+          "label": "Санаторно-курортное лечение",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "OtherRehabMed",
+          "label": "Другое",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "ExpertAdviceMed",
+          "label": "Рекомендации специалистов ГС МСЭ",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "MedPerformed",
+          "label": "Выполнено",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "ExecutionIPRDateMed",
+          "label": "Дата выполнения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "PlaceExecutionMed",
+          "label": "Место выполнение",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "MedNotPerformed",
+          "label": "Не выполнено",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "NotPerformedMed",
+          "label": "Не выполнено (указать причину)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "SocialRehabilitation",
+      "label": "Социальная реабилитация",
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "RehabTherapySoc",
+          "label": "Предоставить протезно-ортопедические услуги",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "ReconstructiveurgerySoc",
+          "label": "Обеспечить вспомогательными оборудованиями",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SpecialMobilEquipmentSoc",
+          "label": "Обеспечение специальными оборудованиями передвижения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SpaTreatmentSoc",
+          "label": "Санаторное курортное лечение",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SpaResortTreatmentSoc",
+          "label": "Социальные услуги",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "OtherRehabSoc",
+          "label": "Другое",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "ExpertAdviceSoc",
+          "label": "Рекомендации специалистов ГС МСЭ",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "ExecutionIPRDateSoc",
+          "label": "Дата выполнения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "PlaceExecutionSoc",
+          "label": "Место выполнение",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SocNotPerformed",
+          "label": "Не выполнено",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "NotPerformedSoc",
+          "label": "Не выполнено (указать причину)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "ProfRehabilitation",
+      "label": "Профессиональная реабилитация",
+      "contents": [
+        {
+          "type": "Bool",
+          "name": "RehabTherapyProf",
+          "label": "Предоставление специалиста по сурдо переводу",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "ReconstructiveurgeryProf",
+          "label": "Мероприятие по-психологически педагогический мероприятие",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "SpaResortTreatmentProf",
+          "label": "Обеспечение работой через ведомство по труду и занятости населения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "ScheduleBrieflyProf",
+          "label": "Составить график (кратко)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "OtherRehabProf",
+          "label": "Другое",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "ExpertAdviceProf",
+          "label": "Рекомендации специалистов ГС МСЭ",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "ProfPerformed",
+          "label": "Выполнено",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "ExecutionIPRDateProf",
+          "label": "Дата выполнения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "PlaceExecutionProf",
+          "label": "Место выполнение",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Bool",
+          "name": "ProfNotPerformed",
+          "label": "Не выполнено",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "NotPerformedProf",
+          "label": "Не выполнено (указать причину)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "Decisions",
+      "label": "Заключения",
+      "contents": [
+        {
+          "type": "Text",
+          "name": "Opinions",
+          "label": "Заключение (заполняется специалистом данной структуры)",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

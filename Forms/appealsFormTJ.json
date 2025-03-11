@@ -1,0 +1,108 @@
+{
+  "formName": "appealsForm",
+  "docDefId": "D347796D-3232-49B0-886D-FAEE1F10B923",
+  "label": "Форма аппеляции",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресные данные заявителя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "Complaint",
+      "label": "Аппеляция",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "DateOfAppeal",
+          "label": "Дата",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "AskOfReviewDecision",
+          "label": "Прошу пересмотреть решение Агенства труда, социальной защиты населения и миграции касательно отказа",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "name",
+          "label": "Имя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "position",
+          "label": "Должность",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "placeOfWork",
+          "label": "Место работы",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "TestResults",
+          "label": "Краткое изложение результатов проверки:",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "CompetentIncompetent",
+          "label": "Семья правомочна/неправомочна на получение АСП",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "decision",
+          "label": "Решение. Восстановить участие семьи в программе АСП/подтвердить правильность отказа",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

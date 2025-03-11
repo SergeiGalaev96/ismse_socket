@@ -1,0 +1,76 @@
+{
+  "formType": "edit",
+  "formName": "RegistrationSearchForm",
+  "label": "Форма поиска мед. актов на регистрации",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "presence",
+      "label": "Критерии поиска по мед. акту",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "MseName",
+          "label": "Наименование МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": false,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "RegNoAct",
+          "label": "№ акта по МСЭК",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Text",
+          "name": "No",
+          "label": "Номер Регистрации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "ExaminationPrRe",
+          "label": "Освидетельствование",
+          "enumDef": "05B5C131-A1A7-46C1-9C28-FFE744136FE3",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресc",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

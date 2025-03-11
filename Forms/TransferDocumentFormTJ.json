@@ -1,0 +1,23 @@
+{
+  "formName": "TransferMedicalCertificateForm",
+  "adultsMedaktDocDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "childMedaktDocDefId": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+  "label": "Форма перевода мед. акта в другой МСЭК",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "detailedFormSection",
+      "label": "Выбор МСЭКа для перевода данных",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "MseName",
+          "label": "МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

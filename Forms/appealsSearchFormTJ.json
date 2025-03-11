@@ -1,0 +1,37 @@
+{
+  "formName": "complaintsSearchForm",
+  "docDefId": "D347796D-3232-49B0-886D-FAEE1F10B923",
+  "label": "Форма поиска аппеляций",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "PersonData",
+          "name": "PersonData",
+          "label": "Заявитель",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "Complaint",
+      "label": "Аппеляция",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "DateOfAppeal",
+          "label": "Дата",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

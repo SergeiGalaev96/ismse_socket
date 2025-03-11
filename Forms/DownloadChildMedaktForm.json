@@ -1,0 +1,61 @@
+{
+  "formName": "DownloadChildMedaktForm",
+  "label": "Форма выбора статуса для выгрузки Медактов(Дт)",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "detailedFormSection",
+      "label": "Выбора статуса для выгрузки Медактов(Дт)",
+      "contents": [
+        {
+          "type": "TransferList",
+          "name": "state",
+          "label": "Статус",
+          "enumDef": "cbd4b1f8-c225-48d6-997c-f2116f2d5122",
+          "edit": true,
+          "required": false,
+          "custom": true
+        },
+        {
+          "type": "DateTime",
+          "name": "startDate",
+          "label": "С",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "DateTime",
+          "name": "endDate",
+          "label": "По",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Enum",
+          "name": "msecId",
+          "label": "МСЭК",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные",
+      "contents": [
+        {
+          "type": "Address",
+          "name": "PersonDetailFormAddress",
+          "label": "Адресные данные",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

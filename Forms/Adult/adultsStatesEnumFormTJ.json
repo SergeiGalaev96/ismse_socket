@@ -1,0 +1,38 @@
+{
+  "formName": "AdultsStatesEnumForm",
+  "docDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "label": "Форма установки нового статуса инвалида",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "statesFormSection",
+      "label": "Форма статуса инвалида",
+      "contents": [
+        {
+          "type": "Enum",
+          "name": "StatusName",
+          "label": "Статус",
+          "enumDef": "DC8F4816-8363-4C94-9EAD-6E5A3F0BD603",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "DateTime",
+          "name": "statusDate",
+          "label": "Дата статуса",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Text",
+          "name": "userName",
+          "label": "Пользователь",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

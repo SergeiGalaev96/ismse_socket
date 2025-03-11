@@ -1,0 +1,116 @@
+{
+  "formName": "appealsGridForm",
+  "docDefId": "229B5A85-3673-45B1-B371-F4D5940CE6EC",
+  "label": "Табличная форма аппеляций",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "State",
+      "label": "Статус аппеляции",
+      "contents": [
+        {
+          "type": "State",
+          "name": "State",
+          "label": "Статус",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": false,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "Text",
+          "name": "Last_Name",
+          "label": "Фамилия",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "First_Name",
+          "label": "Имя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "Middle_Name",
+          "label": "Отчество",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "IIN",
+          "label": "ПИН",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "Date_of_Birth",
+          "label": "Дата рождения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Sex",
+          "label": "Пол",
+          "enumDef": "c780ce23-ac09-4cc3-8147-7779f6d80b65",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "Appeals",
+      "label": "Аппеляция",
+      "contents": [
+        {
+          "type": "DateTime",
+          "name": "DateOfAppeal",
+          "label": "Дата",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "name",
+          "label": "Имя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "position",
+          "label": "Должность",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "placeOfWork",
+          "label": "Место работы",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}

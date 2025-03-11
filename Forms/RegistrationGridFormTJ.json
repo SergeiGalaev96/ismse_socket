@@ -1,0 +1,165 @@
+{
+  "formType": "edit",
+  "formName": "adultsRegistrationGridForm",
+  "docDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+  "label": "Форма поиска мед. актов на регистрации",
+  "sections": [
+    {
+      "type": "Section",
+      "name": "presence",
+      "label": "Наличие",
+      "contents": [
+        {
+          "type": "State",
+          "name": "State",
+          "label": "Статус",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "No",
+          "label": "№ регистрации",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "RegNoAct",
+          "label": "№ акта по МСЭК",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": true
+        },
+        {
+          "type": "Enum",
+          "name": "MseName",
+          "label": "Наименование МСЭ",
+          "enumDef": "cabb8c30-79e7-4f0b-b256-94d1bf942d51",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "ExaminationPrRe",
+          "label": "Освидетельствование",
+          "enumDef": "05B5C131-A1A7-46C1-9C28-FFE744136FE3",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "personDetailFormSection",
+      "label": "Адресные данные заявителя",
+      "contents": [
+        {
+          "type": "Text",
+          "name": "Region",
+          "label": "Область",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "District",
+          "label": "Район/город",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "subDistrict",
+          "label": "Джамоат",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "Village",
+          "label": "Село",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "ResidentialAddress",
+          "label": "Дом/кв/ул",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "Phone",
+          "label": "Телефон",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "PersonData",
+      "label": "Заявитель",
+      "contents": [
+        {
+          "type": "Text",
+          "name": "Last_Name",
+          "label": "Фамилия",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "First_Name",
+          "label": "Имя",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "Middle_Name",
+          "label": "Отчество",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Text",
+          "name": "IIN",
+          "label": "ПИН",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "DateTime",
+          "name": "Date_of_Birth",
+          "label": "Дата рождения",
+          "enumDef": "00000000-0000-0000-0000-000000000000",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "Enum",
+          "name": "Sex",
+          "label": "Пол",
+          "enumDef": "c780ce23-ac09-4cc3-8147-7779f6d80b65",
+          "edit": true,
+          "required": false
+        }
+      ]
+    }
+  ]
+}
