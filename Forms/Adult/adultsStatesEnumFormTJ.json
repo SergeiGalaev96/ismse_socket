@@ -1,7 +1,7 @@
 {
   "formName": "AdultsStatesEnumForm",
   "docDefId": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
-  "label": "Форма установки нового статуса инвалида",
+  "label": "Форма изменения статуса инвалида",
   "sections": [
     {
       "type": "Section",

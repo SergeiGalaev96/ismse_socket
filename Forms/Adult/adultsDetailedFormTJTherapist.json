@@ -125,9 +125,9 @@
           "edit": true,
           "required": true
         },
-        { 
-          "type": "Enum", 
-          "name": "ConsMarriage",  
+        {
+          "type": "Enum",
+          "name": "ConsMarriage",
           "label": "Имеющие кровнородственный брак родителей-инвалидов",
           "enumDef": "6D0466D2-3CB5-4576-9F89-55FD8D7EDEA4",
           "edit": true,
@@ -700,6 +700,45 @@
           "name": "CompainDagnosisMKB3",
           "label": "Соп. диагноз по МКБ 3",
           "enumDef": "F0254DAA-F622-4443-98AA-7ACA3D1DCC07",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
+      "name": "mkbSection",
+      "label": "МКБ-10",
+      "contents": [
+        {
+          "type": "mkb",
+          "name": "mkbClass",
+          "label": "Класс МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "mkb",
+          "name": "mkbBlock",
+          "label": "Блок МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "mkb",
+          "name": "mkbCategory",
+          "label": "Категория МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "mkb",
+          "name": "mkbDiagnosis",
+          "label": "Диагноз МКБ-10",
+          "enumDef": "",
           "edit": true,
           "required": false
         }

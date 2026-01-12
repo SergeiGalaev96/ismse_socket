@@ -83,6 +83,7 @@ const ConfigurationFile = require('./General/ConfigurationFile.json')
 const Buttons = require('./General/Buttons.json')
 const dashboardRoutes = require('./General/dashboardRoutes.json')
 const SOAT = require('./General/SOAT.json')
+const mkb = require('./General/mkb.json')
 
 // Libraries
 var amqp = require('amqplib/callback_api')
@@ -93,25 +94,27 @@ const fs = require('fs')
 var WebSocketServer = new require("ws")
 var FormData = require('form-data')
 const axios = require('axios')
+const wsport = 3120
+
+const amqpHost = process.env.DOCKER_ENV === 'true' ? 'rabbitmq' : 'localhost';
+// const CamundaApiHost = process.env.DOCKER_ENV === 'true' ?  'http://camunda:8080/engine-rest' : 'http://192.168.2.109:8080/engine-rest'
 
 // RESTS LOCAL
 const CamundaApiHost = 'http://localhost:8080/engine-rest'
-// const ismseApi = "http://server-1/ISMSE-REST-API/api"
-// const cacheApi = "http://server-1/ISMSE-REST-API/api"
+// const ismseApi = "http://localhost:45621/api"
+// const cacheApi = "http://localhost:45621/api"
+// const asistApi = "http://localhost:45621/api"
+// const keycloakRESTApi = "http://192.168.0.64:8180"
+// const keycloakRESTApi = "http://192.168.2.109:8180"
+// 
+
+// RESTS SERVER 72
 // const CamundaApiHost = 'http://192.168.0.72:8080/engine-rest'
 const ismseApi = "http://192.168.0.64:80/ismse-rest-api/api"
 const cacheApi = "http://192.168.0.64:80/ismse-rest-api/api"
 const asistApi = "http://192.168.0.64:80/ismse-rest-api/api"
 const keycloakRESTApi = "http://192.168.0.64:8180"
-const wsport = 3320
 
-// RESTS SERVER 72
-// const CamundaApiHost = 'http://192.168.0.72:8080/engine-rest'
-// const ismseApi = "http://192.168.0.64:80/ismse-rest-api/api"
-// const cacheApi = "http://192.168.0.64:80/ismse-rest-api/api"
-// const asistApi = "http://192.168.0.64:80/ismse-rest-api/api"
-// const keycloakRESTApi = "http://192.168.0.64:8180"
-// const wsport = 3120
 
 
 // // RESTS SERVER 64
@@ -120,7 +123,7 @@ const wsport = 3320
 // const cacheApi = "http://192.168.0.64:80/cissa-web-api/api"
 // const asistApi = "http://192.168.0.64:80/ismse-rest-api/api"
 // const keycloakRESTApi = "http://192.168.0.64:8180"
-// const wsport = 3120
+
 
 
 // List of connected clients
@@ -142,7 +145,7 @@ function startCamundaProcess(processKey, variables) {
     )
   }, (error, response, body) => {
     if (error) {
-      return console.log("call REST error: ", error)
+      return console.log("call Camunda error")
     }
     // else clients[session_id].send(JSON.stringify({ messageType: "processInfo", data: body, "process_id": process_id }));
   })
@@ -190,8 +193,13 @@ async function restoreSession(userId, session_id, userRole) {
   for (let i = 0; i < camundaTaskList.length; i++) {
     var task = null
     task = await getTaskVariables(camundaTaskList[i].id)
-    if (task.user_session_id.value !== undefined) {
-      sendMessageByType(task, userId, camundaTaskList[i].id, true, task.user_session_id.value, userRole)
+    try{
+      if (task.user_session_id.value !== undefined) {
+        sendMessageByType(task, userId, camundaTaskList[i].id, true, task.user_session_id.value, userRole)
+      }
+    }
+    catch(er){
+      console.log("ERROR GETTING SEESION")
     }
   }
 }
@@ -277,7 +285,7 @@ async function sendMessageByType(task, userId, taskId, restore, session_id, user
       size: task.size.value,
       page: task.page.value,
       person: person,
-      userAction: task.userAction.value,      
+      userAction: task.userAction.value,
       tabLabel: task.tabLabel.value,
       userRole: task.userRole.value,
       userId: task.userId.value
@@ -323,7 +331,7 @@ async function sendMessageByType(task, userId, taskId, restore, session_id, user
         sendMonitoringForm(message, restore)
       }
 
-      
+
       else if (taskType === "showMemoForm") {
         sendMemoForm(message, restore)
       }
@@ -346,19 +354,19 @@ async function sendMessageByType(task, userId, taskId, restore, session_id, user
 
 // Get all camunda Tasks
 async function getCamundaTaskList() {
-  var camundaTaskList = await request(
-    {
-      "url": CamundaApiHost + "/task"
-    }
-  )
+  const camundaTaskList = await request({
+    uri: CamundaApiHost + "/task", // ← именно `uri`
+    json: true                     // ← автоматический `JSON.parse`
+  })
     .then(function (response) {
-      var data = JSON.parse(response)
-      return data
+      return response
     })
     .catch(function (error) {
-      return console.log("Getting Camunda Task List error: ", error)
-    })
-  return camundaTaskList
+      console.log("Getting Camunda Task List error:", error.message);
+      return []
+    });
+
+  return camundaTaskList;
 }
 // Get all task variables by id
 async function getTaskVariables(id) {
@@ -372,7 +380,7 @@ async function getTaskVariables(id) {
       return data
     })
     .catch(function (error) {
-      return console.log("Getting Camunda Task Variables error: ", error)
+      return console.log("Getting Camunda Task Variables error: ")
     })
   return taskVariables
 }
@@ -389,7 +397,7 @@ async function getObjectTypeData(id, varName) {
       return data
     })
     .catch(function (error) {
-      return console.log("Getting Camunda docList error: ", error)
+      return console.log("Getting Camunda docList error: ")
     })
   return objectTypeData
 }
@@ -565,10 +573,10 @@ async function saveEnumDataToIgnite(newEnumValues) {
 
   }, (error, response, body) => {
     if (error) {
-      return console.log("complete task error: ", error)
+      return console.log("Create EnumData error")
     }
     else {
-      console.log("Created Data", body)
+      console.log("EnumData Created")
     }
   })
 }
@@ -595,7 +603,7 @@ async function getEnumValues(enumDefId) {
       return data
     })
     .catch(function (error) {
-      console.log("Collecting enum data error: ", error)
+      console.log("Collecting enum data error: ")
       var data = {
         type: "enumData",
         enumDef: enumDefId,
@@ -722,9 +730,8 @@ async function sendDownloadMedaktForm(message, restore) {
   sendMessage(newCommandJSON)
 }
 //  Collect data related to ... form and send to client
-// async function sendChildStatesSelectingForm(session_id, taskID, process_id, docId, taskType,
-//   selectedDoc, formType, formButtons, docList, person, size, page, userRole, restore, tabLabel, userId) {
-  async function sendChildStatesSelectingForm(message, restore){
+
+async function sendChildStatesSelectingForm(message, restore) {
   let form = childStatesEnumForm
   // let gridFormButtons = null
   let buttons = Buttons[ConfigurationFile.rolesConfig[userRole]][formButtons]
@@ -925,7 +932,7 @@ async function sendDetailedForm(message, restore) {
     personForm = personShortForm
   }
   buttons = Buttons[ConfigurationFile.rolesConfig[message.userRole]][message.buttons]
-  if (form !== null) { 
+  if (form !== null) {
     enumData = await getEnumData(form)
     let PlaceOfLivingValues = await getEnumValues("2D1C2089-B970-47FC-BD73-2F241FAC12B5")
     enumData.push(PlaceOfLivingValues)
@@ -963,9 +970,10 @@ async function sendDetailedForm(message, restore) {
     session_id: message.session_id,
     process_id: message.process_id,
     tabLabel: message.tabLabel,
-    userId: message.userId
+    userId: message.userId,
+    mkb: mkb
   }
-  // console.log("US ACT", )
+  // console.log("MKB", mkb)
   sendMessage(newCommandJson)
   get18Entries(message.userId)
 }
@@ -1101,8 +1109,8 @@ async function sendMonitoringForm(message, restore) {
 
   let operators = []
   let parsedDocList = JSON.parse(message.docList)
-  for(let i=0; i<parsedDocList.length; i++){
-    if(parsedDocList[i].attributes.userRole[0] === "Оператор"){
+  for (let i = 0; i < parsedDocList.length; i++) {
+    if (parsedDocList[i].attributes.userRole[0] === "Оператор") {
       operators.push(parsedDocList[i])
     }
     console.log("U", parsedDocList[i])
@@ -1398,7 +1406,7 @@ async function deleteDeployments(all, incomingJson) {
                 console.log("DELETE ", deploymentId)
               })
               .catch(function (error) {
-                return console.log("ERROR: ", error)
+                console.log("DELETE DEPLOYMENT ERROR: ")
               })
           }
 
@@ -1409,7 +1417,7 @@ async function deleteDeployments(all, incomingJson) {
       }
     })
     .catch(function (error) {
-      return console.log("ERROR: ", error)
+      console.log("GET DEPLOYMENT ERROR: ")
     })
   if (deletingComplited === true && all === true) {
     deployProcesses()
@@ -1454,11 +1462,11 @@ async function get18Entries(userId) {
         sendMessage({ userId: userId, messageType: "ChildList", total: list.data.length })
       }
       else {
-        console.log("CHILD LIST COLLECT ERR", list.errorMessage)
+        console.log("CHILD LIST COLLECT ERR")
       }
     })
     .catch(function (error) {
-      return console.log("ERROR: ", error)
+      console.log("CHILD LIST COLLECT ERR")
     })
 }
 
@@ -1608,7 +1616,8 @@ async function sendRabbitMessage(msg) {
   }
   if (message.taskType === "showPersonForm" || message.taskType === "showPersonFormNRSZ") {
     // var selectedDoc = JSON.parse(message.selectedDoc)
-    sendPersonForm(message, false)  }
+    sendPersonForm(message, false)
+  }
   else if (message.taskType === "showRegForm" || message.taskType === "showRegSearchForm" ||
     message.taskType === "showChildRegForm" || message.taskType === "showChildRegSearchForm") {
     sendRegForm(message, false)
@@ -1653,27 +1662,36 @@ async function sendRabbitMessage(msg) {
   }
 }
 
-// Rabbit MQ server
-amqp.connect('amqp://localhost', function (error0, connection) {
-  if (error0) {
-    throw error0
-  }
-  connection.createChannel(function (error1, channel) {
-    if (error1) {
-      throw error1
+function connectToRabbitMQ() {
+  console.log("ENV", process.env.DOCKER_ENV, "amqpHost", amqpHost);
+
+  amqp.connect(`amqp://${amqpHost}`, function (error0, connection) {
+    if (error0) {
+      console.log('Failed to connect to RabbitMQ:', error0);
+      setTimeout(connectToRabbitMQ, 10000);  // Повтор через 10 секунд
+      return;
     }
-    var queue = 'hello'
-    channel.assertQueue(queue, {
-      durable: false
-    })
-    console.log("Waiting for messages from Camunda")
-    channel.consume(queue, function (msg) {
-      sendRabbitMessage(msg.content.toString())
-    }, {
-      noAck: true
-    })
-  })
-})
 
+    console.log("Connected to RabbitMQ");
 
+    connection.createChannel(function (error1, channel) {
+      if (error1) {
+        console.log('Failed to create channel:', error1);
+        return;
+      }
 
+      const queue = 'hello';
+      channel.assertQueue(queue, { durable: false });
+
+      console.log("Waiting for messages from Camunda");
+
+      channel.consume(queue, function (msg) {
+        if (msg) {
+          sendRabbitMessage(msg.content.toString());
+        }
+      }, { noAck: true });
+    });
+  });
+}
+
+connectToRabbitMQ();

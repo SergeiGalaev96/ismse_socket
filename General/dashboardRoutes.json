@@ -113,6 +113,14 @@
               "name": "trashAdultsMedakt",
               "label": "Корзина мед. акт",
               "parentLabel": "Корзина(Вз)"
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_bbabb801-0f45-4a52-b2b6-013b4ab72b9e",
+              "docDef": "B4DDDC00-9EA9-4AD4-9C4F-498E87AA9828",
+              "name": "archiveAdultsMedakt",
+              "label": "Архив мед. акт",
+              "parentLabel": "Архив(Вз)"
             }
           ]
         },
@@ -213,11 +221,18 @@
               "commandType": "launchProcess",
               "processKey": "process_7ab03aea-ae93-4358-9961-bee3721955f8",
               "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
-              "name": "trashAdultsMedakt",
+              "name": "trashChildMedakt",
               "label": "Корзина мед. акт",
               "parentLabel": "Корзина(Дт)"
-            }  
-            
+            },
+            {
+              "commandType": "launchProcess",
+              "processKey": "process_b4e10088-bd7f-454f-a2da-dcd3f1c0b3f2",
+              "docDef": "5FDE415F-DB00-43B4-BA6E-FE439CFF6DA0",
+              "name": "archiveChildMedakt",
+              "label": "Архив мед. акт",
+              "parentLabel": "Архив(Дт)"
+            }
           ]
         },
         {

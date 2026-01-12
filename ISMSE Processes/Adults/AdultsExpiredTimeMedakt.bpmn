@@ -523,7 +523,7 @@ execution.setVariable("person", "null")
     <bpmn:sequenceFlow id="Flow_0cyo4m8" name="cancel" sourceRef="Gateway_1a82i7a" targetRef="Event_1h5lu59">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "cancel"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
-    <bpmn:sequenceFlow id="Flow_0ncr17u" sourceRef="Gateway_1a82i7a" targetRef="Activity_1g9rgou">
+    <bpmn:sequenceFlow id="Flow_0ncr17u" sourceRef="Gateway_1a82i7a" targetRef="Activity_1cy2fku">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{userAction  == "setNewState"}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:serviceTask id="Activity_18yifmj" name="Delete document to trash">
@@ -588,8 +588,6 @@ execution.setVariable("person", "null")
           <camunda:connectorId>http-connector</camunda:connectorId>
         </camunda:connector>
       </bpmn:extensionElements>
-      <bpmn:incoming>Flow_0ncr17u</bpmn:incoming>
-      <bpmn:outgoing>Flow_1bvm60f</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:callActivity id="Activity_0upk6sm" name="Call Toast" calledElement="CallToastISMSE">
       <bpmn:extensionElements>
@@ -607,31 +605,46 @@ execution.setVariable("person", "null")
       <bpmn:outgoing>Flow_1wglsn2</bpmn:outgoing>
       <bpmn:outgoing>Flow_0jdl37y</bpmn:outgoing>
     </bpmn:exclusiveGateway>
-    <bpmn:sequenceFlow id="Flow_1bvm60f" sourceRef="Activity_1g9rgou" targetRef="Activity_0upk6sm" />
+    <bpmn:sequenceFlow id="Flow_1bvm60f" sourceRef="Activity_1ghxo74" targetRef="Activity_0upk6sm" />
     <bpmn:sequenceFlow id="Flow_1evi2ua" sourceRef="Activity_0upk6sm" targetRef="Gateway_0pxml00" />
     <bpmn:sequenceFlow id="Flow_0jdl37y" name="false" sourceRef="Gateway_0pxml00" targetRef="Activity_0exx2xz">
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">#{result== "false" }</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
+    <bpmn:scriptTask id="Activity_1cy2fku" name="update stateId value" scriptFormat="javascript" camunda:resultVariable="taskType">
+      <bpmn:incoming>Flow_0ncr17u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0m4idpr</bpmn:outgoing>
+      <bpmn:script>var newStateBody = S(stateBody).prop("stateTypeId", stateTypeId)
+// newStateBody = S(stateBody).prop("statusDate", statusDate)
+execution.setVariable("stateBody", newStateBody.toString())
+</bpmn:script>
+    </bpmn:scriptTask>
+    <bpmn:serviceTask id="Activity_1ghxo74" name="Set mult docs to state">
+      <bpmn:extensionElements>
+        <camunda:connector>
+          <camunda:inputOutput>
+            <camunda:inputParameter name="url">${ismseApi}/Document/SetMultipleDocsToState?userId=${userId}</camunda:inputParameter>
+            <camunda:inputParameter name="method">POST</camunda:inputParameter>
+            <camunda:inputParameter name="headers">
+              <camunda:map>
+                <camunda:entry key="Accept">application/json</camunda:entry>
+                <camunda:entry key="Content-Type">application/json</camunda:entry>
+              </camunda:map>
+            </camunda:inputParameter>
+            <camunda:inputParameter name="payload">${stateBody}</camunda:inputParameter>
+            <camunda:outputParameter name="setStateRes">
+              <camunda:script scriptFormat="Javascript">response</camunda:script>
+            </camunda:outputParameter>
+          </camunda:inputOutput>
+          <camunda:connectorId>http-connector</camunda:connectorId>
+        </camunda:connector>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0m4idpr</bpmn:incoming>
+      <bpmn:outgoing>Flow_1bvm60f</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="Flow_0m4idpr" sourceRef="Activity_1cy2fku" targetRef="Activity_1ghxo74" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_21764e48-7575-4b0a-bcc9-6ffd3bb4cb32">
-      <bpmndi:BPMNEdge id="Flow_0jdl37y_di" bpmnElement="Flow_0jdl37y">
-        <di:waypoint x="615" y="459" />
-        <di:waypoint x="615" y="560" />
-        <di:waypoint x="1180" y="560" />
-        <di:waypoint x="1180" y="474" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="621" y="542" width="23" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1evi2ua_di" bpmnElement="Flow_1evi2ua" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
-        <di:waypoint x="682" y="434" />
-        <di:waypoint x="640" y="434" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1bvm60f_di" bpmnElement="Flow_1bvm60f" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
-        <di:waypoint x="802" y="434" />
-        <di:waypoint x="782" y="434" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_17eily5_di" bpmnElement="Flow_17eily5">
         <di:waypoint x="355" y="360" />
         <di:waypoint x="285" y="360" />
@@ -653,25 +666,6 @@ execution.setVariable("person", "null")
       <bpmndi:BPMNEdge id="Flow_00r49dt_di" bpmnElement="Flow_00r49dt" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
         <di:waypoint x="475" y="360" />
         <di:waypoint x="455" y="360" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ncr17u_di" bpmnElement="Flow_0ncr17u" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
-        <di:waypoint x="924" y="434" />
-        <di:waypoint x="902" y="434" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0cyo4m8_di" bpmnElement="Flow_0cyo4m8" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
-        <di:waypoint x="949" y="459" />
-        <di:waypoint x="949" y="513" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="955" y="475" width="33" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1xf4vng_di" bpmnElement="Flow_1xf4vng" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
-        <di:waypoint x="1009" y="434" />
-        <di:waypoint x="974" y="434" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1110ky4_di" bpmnElement="Flow_1110ky4" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
-        <di:waypoint x="1130" y="434" />
-        <di:waypoint x="1109" y="434" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0pyqijp_di" bpmnElement="Flow_0pyqijp" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
         <di:waypoint x="920" y="284" />
@@ -700,10 +694,10 @@ execution.setVariable("person", "null")
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0spibfa_di" bpmnElement="Flow_0spibfa" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
         <di:waypoint x="1316" y="215" />
-        <di:waypoint x="1316" y="434" />
-        <di:waypoint x="1230" y="434" />
+        <di:waypoint x="1316" y="470" />
+        <di:waypoint x="1230" y="470" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1248" y="417" width="63" height="14" />
+          <dc:Bounds x="1248" y="489" width="63" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1ms1i98_di" bpmnElement="Flow_1ms1i98" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
@@ -768,34 +762,74 @@ execution.setVariable("person", "null")
         <di:waypoint x="355" y="190" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_1wglsn2_di" bpmnElement="Flow_1wglsn2" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
-        <di:waypoint x="590" y="434" />
-        <di:waypoint x="285" y="434" />
+        <di:waypoint x="482" y="470" />
+        <di:waypoint x="285" y="470" />
         <di:waypoint x="285" y="230" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="567" y="416" width="18" height="14" />
+          <dc:Bounds x="392" y="452" width="18" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_02cy5ye_di" bpmnElement="Flow_02cy5ye" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
-        <di:waypoint x="949" y="459" />
-        <di:waypoint x="949" y="490" />
-        <di:waypoint x="285" y="490" />
+        <di:waypoint x="949" y="445" />
+        <di:waypoint x="949" y="410" />
+        <di:waypoint x="285" y="410" />
         <di:waypoint x="285" y="230" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="918" y="473" width="24" height="14" />
+          <dc:Bounds x="918" y="393" width="24" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0o832yr_di" bpmnElement="Flow_0o832yr" bioc:stroke="rgb(30, 136, 229)" bioc:fill="rgb(187, 222, 251)">
         <di:waypoint x="1316" y="215" />
-        <di:waypoint x="1316" y="570" />
-        <di:waypoint x="285" y="570" />
+        <di:waypoint x="1316" y="650" />
+        <di:waypoint x="285" y="650" />
         <di:waypoint x="285" y="230" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1273" y="553" width="24" height="14" />
+          <dc:Bounds x="1288" y="633" width="24" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0o6jk05_di" bpmnElement="Flow_0o6jk05" bioc:stroke="rgb(67, 160, 71)" bioc:fill="rgb(200, 230, 201)">
         <di:waypoint x="188" y="190" />
         <di:waypoint x="235" y="190" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jdl37y_di" bpmnElement="Flow_0jdl37y">
+        <di:waypoint x="507" y="495" />
+        <di:waypoint x="507" y="610" />
+        <di:waypoint x="1180" y="610" />
+        <di:waypoint x="1180" y="510" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="517" y="592" width="23" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1110ky4_di" bpmnElement="Flow_1110ky4" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1130" y="470" />
+        <di:waypoint x="1109" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1xf4vng_di" bpmnElement="Flow_1xf4vng" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="1009" y="470" />
+        <di:waypoint x="974" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cyo4m8_di" bpmnElement="Flow_0cyo4m8" bioc:stroke="rgb(229, 57, 53)" bioc:fill="rgb(255, 205, 210)">
+        <di:waypoint x="949" y="495" />
+        <di:waypoint x="949" y="549" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="955" y="511" width="33" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ncr17u_di" bpmnElement="Flow_0ncr17u" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="924" y="470" />
+        <di:waypoint x="910" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1bvm60f_di" bpmnElement="Flow_1bvm60f" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="690" y="470" />
+        <di:waypoint x="665" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1evi2ua_di" bpmnElement="Flow_1evi2ua" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="565" y="470" />
+        <di:waypoint x="532" y="470" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0m4idpr_di" bpmnElement="Flow_0m4idpr" bioc:stroke="rgb(142, 36, 170)" bioc:fill="rgb(225, 190, 231)">
+        <di:waypoint x="810" y="470" />
+        <di:waypoint x="790" y="470" />
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Event_1u4xfx2_di" bpmnElement="Event_1u4xfx2">
         <dc:Bounds x="152" y="172" width="36" height="36" />
@@ -845,18 +879,6 @@ execution.setVariable("person", "null")
       <bpmndi:BPMNShape id="Activity_1pk6x6d_di" bpmnElement="Activity_1pk6x6d">
         <dc:Bounds x="800" y="244" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0exx2xz_di" bpmnElement="Activity_0exx2xz">
-        <dc:Bounds x="1130" y="394" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1a82i7a_di" bpmnElement="Gateway_1a82i7a" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
-        <dc:Bounds x="924" y="409" width="50" height="50" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1h5lu59_di" bpmnElement="Event_1h5lu59">
-        <dc:Bounds x="931" y="513" width="36" height="36" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1p0opg4_di" bpmnElement="Activity_1p0opg4">
-        <dc:Bounds x="1009" y="394" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0sagji2_di" bpmnElement="Event_0sagji2">
         <dc:Bounds x="1298" y="82" width="36" height="36" />
       </bpmndi:BPMNShape>
@@ -866,14 +888,32 @@ execution.setVariable("person", "null")
       <bpmndi:BPMNShape id="Activity_1shs7l1_di" bpmnElement="Activity_1shs7l1">
         <dc:Bounds x="355" y="320" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_1g9rgou_di" bpmnElement="Activity_1g9rgou">
-        <dc:Bounds x="802" y="394" width="100" height="80" />
+      <bpmndi:BPMNShape id="Activity_0exx2xz_di" bpmnElement="Activity_0exx2xz">
+        <dc:Bounds x="1130" y="430" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1a82i7a_di" bpmnElement="Gateway_1a82i7a" isMarkerVisible="true" bioc:stroke="rgb(251, 140, 0)" bioc:fill="rgb(255, 224, 178)">
+        <dc:Bounds x="924" y="445" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1h5lu59_di" bpmnElement="Event_1h5lu59">
+        <dc:Bounds x="931" y="549" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1p0opg4_di" bpmnElement="Activity_1p0opg4">
+        <dc:Bounds x="1009" y="430" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0upk6sm_di" bpmnElement="Activity_0upk6sm">
-        <dc:Bounds x="682" y="394" width="100" height="80" />
+        <dc:Bounds x="565" y="430" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1cy2fku_di" bpmnElement="Activity_1cy2fku">
+        <dc:Bounds x="810" y="430" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1ghxo74_di" bpmnElement="Activity_1ghxo74">
+        <dc:Bounds x="690" y="430" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0pxml00_di" bpmnElement="Gateway_0pxml00" isMarkerVisible="true">
-        <dc:Bounds x="590" y="409" width="50" height="50" />
+        <dc:Bounds x="482" y="445" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1g9rgou_di" bpmnElement="Activity_1g9rgou">
+        <dc:Bounds x="690" y="520" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>

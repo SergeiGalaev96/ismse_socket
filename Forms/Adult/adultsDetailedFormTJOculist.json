@@ -707,6 +707,45 @@
     },
     {
       "type": "Section",
+      "name": "mkbSection",
+      "label": "МКБ-10",
+      "contents": [
+        {
+          "type": "mkb",
+          "name": "mkbClass",
+          "label": "Класс МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "mkb",
+          "name": "mkbBlock",
+          "label": "Блок МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "mkb",
+          "name": "mkbCategory",
+          "label": "Категория МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        },
+        {
+          "type": "mkb",
+          "name": "mkbDiagnosis",
+          "label": "Диагноз МКБ-10",
+          "enumDef": "",
+          "edit": true,
+          "required": false
+        }
+      ]
+    },
+    {
+      "type": "Section",
       "name": "ExpertDecision",
       "label": "Экспертное решение",
       "contents": [

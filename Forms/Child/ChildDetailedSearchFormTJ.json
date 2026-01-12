@@ -37,7 +37,7 @@
           "label": "№ акта по МСЭК",
           "enumDef": "00000000-0000-0000-0000-000000000000",
           "edit": true,
-          "required": true
+          "required": false
         },
         {
           "type": "Text",

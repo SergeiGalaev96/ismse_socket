@@ -57,14 +57,6 @@
         },
         {
           "type": "Text",
-          "name": "address",
-          "label": "Адрес",
-          "enumDef": "00000000-0000-0000-0000-000000000000",
-          "edit": true,
-          "required": false
-        },
-        {
-          "type": "Text",
           "name": "phone",
           "label": "Телефон",
           "enumDef": "00000000-0000-0000-0000-000000000000",
