@@ -261,7 +261,7 @@
     ],
     "ReexaminationDetailedFormButtons": [
       {
-        "name": "createDocument",
+        "name": "saveMedakt",
         "label": "Сохранить",
         "backgroundColor": "#D1FBD1"
       },
@@ -1129,7 +1129,7 @@
     ],
     "ReexaminationDetailedFormButtons": [
       {
-        "name": "createDocument",
+        "name": "saveMedakt",
         "label": "Сохранить",
         "backgroundColor": "#D1FBD1"
       },
@@ -1945,7 +1945,7 @@
     ],
     "ReexaminationDetailedFormButtons": [
       {
-        "name": "createDocument",
+        "name": "saveMedakt",
         "label": "Сохранить",
         "backgroundColor": "#D1FBD1"
       },
@@ -2781,7 +2781,7 @@
     ],
     "ReexaminationDetailedFormButtons": [
       {
-        "name": "createDocument",
+        "name": "saveMedakt",
         "label": "Сохранить",
         "backgroundColor": "#D1FBD1"
       },

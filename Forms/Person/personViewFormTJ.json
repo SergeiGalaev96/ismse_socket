@@ -68,7 +68,7 @@
       "caption": "Дата рождения",
       "enumDef": "00000000-0000-0000-0000-000000000000",
       "edit": true,
-      "required": false
+      "required": true
     },
     {
       "type": "Enum",
